@@ -12,4 +12,6 @@ import java.util.List;
 public interface CustomerDAO {
     PagingObject<Customer> getListCustomerDAO(PagingObject<Customer> pagingObject, String criteria);
     String findContactName(int customerID);
+    int getTotalEquipment(Customer customer);
+    String getLatestOrder(Customer customer);
 }

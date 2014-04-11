@@ -64,10 +64,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CustomerDAOimpl.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CustomerDAOimpl.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/impl/CustomerDAOimpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="1055" selection-end="1098" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1734">
+            <state line="76" column="0" selection-start="2946" selection-end="2946" vertical-scroll-proportion="0.4319809" vertical-offset="924" max-vertical-offset="1343">
+              <folding>
+                <element signature="method#findContactName#0;class#CustomerDAOimpl#0" expanded="false" />
+                <element signature="method#getTotalEquipment#0;class#CustomerDAOimpl#0" expanded="false" />
+                <element signature="method#getLatestOrder#0;class#CustomerDAOimpl#0" expanded="false" />
+                <marker date="1397241675871" expanded="true" signature="993:1017" placeholder="Select * fro..customers..." />
+                <marker date="1397241675871" expanded="true" signature="3052:3134" placeholder="Select * fro..contacts..." />
+                <marker date="1397241675871" expanded="true" signature="3755:4223" placeholder="select custo..customers..." />
+                <marker date="1397241675871" expanded="true" signature="4848:5231" placeholder="select custo..customers..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerBusinessModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/business/model/CustomerBusinessModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="22" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="663">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Customer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/persistent/entity/Customer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="0" selection-start="887" selection-end="887" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1139">
               <folding />
             </state>
           </provider>
@@ -76,43 +102,7 @@
       <file leaf-file-name="CustomerService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/business/service/CustomerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1309">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Spring-Module.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Spring-Module.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="8" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="238">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="springMvC.iml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springMvC.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="65" selection-start="833" selection-end="833" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="884">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerBusinessModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/business/model/CustomerBusinessModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="731" max-vertical-offset="1003">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/MainTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="544">
+            <state line="58" column="80" selection-start="2591" selection-end="2591" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1224">
               <folding />
             </state>
           </provider>
@@ -121,25 +111,7 @@
       <file leaf-file-name="LoginController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="42" selection-start="1098" selection-end="1141" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="935">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerController.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/CustomerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="1" selection-start="300" selection-end="300" vertical-scroll-proportion="0.41666666" vertical-offset="0" max-vertical-offset="408">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="welcome.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/welcome.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="48" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1343">
+            <state line="32" column="63" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -184,7 +156,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/database/Spring-Datasource.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/customer/Spring-Customer.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/util/PagingObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/persistent/entity/Customer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/CustomerRowMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/MainTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/presentation/CustomerController.java" />
@@ -194,13 +165,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/presentation/LogoutController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/welcome.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/CustomerDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/impl/CustomerDAOimpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/business/service/CustomerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/presentation/HelloController.java" />
         <option value="$PROJECT_DIR$/springMvC.iml" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/util/DBUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/presentation/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/persistent/entity/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/CustomerDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/impl/CustomerDAOimpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/business/service/CustomerService.java" />
       </list>
     </option>
   </component>
@@ -274,8 +246,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -370,28 +340,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springMvC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qsoft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="presentation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -415,6 +363,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="persistent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -474,8 +426,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="springMvC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qsoft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="springMvC" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qsoft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -916,12 +922,16 @@
       <workItem from="1397198464062" duration="2226000" />
       <workItem from="1397206918556" duration="101000" />
       <workItem from="1397207057443" duration="2511000" />
-      <workItem from="1397209965213" duration="34000" />
+      <workItem from="1397209965213" duration="614000" />
+      <workItem from="1397220651520" duration="6356000" />
+      <workItem from="1397232834974" duration="752000" />
+      <workItem from="1397234311668" duration="513000" />
+      <workItem from="1397234875687" duration="3570000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52164000" />
+    <option name="totallyTimeSpent" value="63935000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -950,7 +960,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2306003" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2845912" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30031446" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
@@ -982,20 +992,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/HelloController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="5" selection-start="278" selection-end="331" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="8" selection-start="883" selection-end="883" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="476">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="22" selection-start="370" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="578">
@@ -1017,9 +1013,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="25" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="833">
-          <folding />
-        </state>
+        <state line="36" column="25" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="833" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
@@ -1075,9 +1069,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="17" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="731">
-          <folding />
-        </state>
+        <state line="12" column="17" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="731" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
@@ -1153,39 +1145,6 @@
         <state line="18" column="73" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="28033" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/persistent/entity/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="41" selection-start="1027" selection-end="1124" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1207" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/CustomerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="98" selection-start="357" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/business/model/CustomerBusinessModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Spring-Module.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="8" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springMvC.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="65" selection-start="833" selection-end="833" vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="13" selection-start="472" selection-end="486" vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="697">
@@ -1200,9 +1159,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="43" selection-start="1584" selection-end="1584" vertical-scroll-proportion="0.0" vertical-offset="642" max-vertical-offset="1139">
-          <folding />
-        </state>
+        <state line="47" column="43" selection-start="1584" selection-end="1584" vertical-scroll-proportion="0.0" vertical-offset="642" max-vertical-offset="1139" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/hello.jsp">
@@ -1236,13 +1193,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/impl/CustomerDAOimpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1055" selection-end="1098" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1547">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/util/PagingObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="0" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="731">
@@ -1252,37 +1202,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/util/DBUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="51" selection-start="349" selection-end="349" vertical-scroll-proportion="0.375" vertical-offset="0" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/business/service/CustomerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.0" vertical-offset="269" max-vertical-offset="1156">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/MainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/welcome.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="48" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1343">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="42" selection-start="1098" selection-end="1141" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="782">
-          <folding />
-        </state>
+        <state line="10" column="51" selection-start="349" selection-end="349" vertical-scroll-proportion="0.375" vertical-offset="0" max-vertical-offset="510" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/customerDetail.jsp">
@@ -1290,10 +1210,104 @@
         <state line="0" column="0" selection-start="0" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/MainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="668" selection-end="668" vertical-scroll-proportion="0.37521222" vertical-offset="0" max-vertical-offset="589" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Spring-Module.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="8" selection-start="359" selection-end="359" vertical-scroll-proportion="0.22295082" vertical-offset="0" max-vertical-offset="610">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.1281407" vertical-offset="51" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/impl/OrderDAOimpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="62" selection-start="3070" selection-end="3070" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <folding>
+            <element signature="method#getListOrdersDAO#0;class#OrderDAOimpl#0" expanded="false" />
+            <element signature="method#getListContactByCustomer#0;class#OrderDAOimpl#0" expanded="false" />
+            <element signature="method#main#0;class#OrderDAOimpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="1" selection-start="300" selection-end="300" vertical-scroll-proportion="0.41666666" vertical-offset="0" max-vertical-offset="408">
+        <state line="11" column="1" selection-start="299" selection-end="301" vertical-scroll-proportion="0.42713568" vertical-offset="0" max-vertical-offset="398">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/welcome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="47" selection-start="1621" selection-end="1621" vertical-scroll-proportion="0.93010753" vertical-offset="504" max-vertical-offset="1343">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springMvC.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="27" selection-start="1460" selection-end="1460" vertical-scroll-proportion="0.06682578" vertical-offset="465" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/CustomerDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="45" selection-start="457" selection-end="457" vertical-scroll-proportion="0.40572792" vertical-offset="0" max-vertical-offset="419">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/business/model/CustomerBusinessModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="22" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/business/service/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="80" selection-start="2591" selection-end="2591" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="63" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/persistent/entity/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="887" selection-end="887" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1139">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/impl/CustomerDAOimpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="0" selection-start="2946" selection-end="2946" vertical-scroll-proportion="0.4319809" vertical-offset="924" max-vertical-offset="1343">
+          <folding>
+            <element signature="method#findContactName#0;class#CustomerDAOimpl#0" expanded="false" />
+            <element signature="method#getTotalEquipment#0;class#CustomerDAOimpl#0" expanded="false" />
+            <element signature="method#getLatestOrder#0;class#CustomerDAOimpl#0" expanded="false" />
+            <marker date="1397241675871" expanded="true" signature="993:1017" placeholder="Select * fro..customers..." />
+            <marker date="1397241675871" expanded="true" signature="3052:3134" placeholder="Select * fro..contacts..." />
+            <marker date="1397241675871" expanded="true" signature="3755:4223" placeholder="select custo..customers..." />
+            <marker date="1397241675871" expanded="true" signature="4848:5231" placeholder="select custo..customers..." />
+          </folding>
         </state>
       </provider>
     </entry>

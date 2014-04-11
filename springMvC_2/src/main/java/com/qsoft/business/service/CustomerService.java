@@ -43,16 +43,20 @@ public class CustomerService {
     }
 
     List<CustomerBusinessModel> getListCustomerBusiness(List<Customer> customerList){
+
         List<CustomerBusinessModel> customerBusinessModelList = new ArrayList<CustomerBusinessModel>();
+        CustomerDAOimpl customerDAOimpl = new CustomerDAOimpl();
 
         for(Customer customer : customerList){
             CustomerBusinessModel customerBusinessModel = new CustomerBusinessModel();
             customerBusinessModel.setCustomerName(customer.getCustomerName());
-            customerBusinessModel.setContactName(customer.getContactName());
+            //customerBusinessModel.setContactName(customer.getContactName());
             customerBusinessModel.setEmailCustomer(customer.getCustomerEmail());
 
             //set total Equipment
+            customerBusinessModel.setTotalEquipment(customerDAOimpl.getTotalEquipment(customer));
             //set latest order
+            customerBusinessModel.setLatestOrder(customerDAOimpl.getLatestOrder(customer));
 
             customerBusinessModelList.add(customerBusinessModel);
         }
@@ -65,7 +69,7 @@ public class CustomerService {
         return 0;
     }
 
-    String getLatestOrder(String cútomerName){
+    String getLatestOrder(String customerName){
         return "";
     }
 }

@@ -22,7 +22,7 @@ public class LoginController {
             model.addObject("username", username);
 
             PagingObject<CustomerBusinessModel> pagingObject = new PagingObject<CustomerBusinessModel>();
-            pagingObject.setCurrentPage(1);
+            pagingObject.setCurrentPage(2);
             pagingObject.setSizeOfPage(5);
             CustomerService customerService = new CustomerService();
             pagingObject = customerService.getListCustomerBusiness(pagingObject, "");
@@ -32,6 +32,7 @@ public class LoginController {
             for (CustomerBusinessModel customer : list) {
                 System.out.println(customer.getCustomerName() + ": " + customer.getContactName());
             }
+            System.out.println(pagingObject.getCurrentPage() + ":" +pagingObject.getTotalPage());
             model.addObject("pagingObject", pagingObject);
             return model;
 

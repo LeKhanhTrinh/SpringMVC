@@ -93,4 +93,63 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    public int getTotalEquipment(Customer customer) {
+
+        Connection conn = null;
+
+        String sql = "select customers.customerNumber, SUM(orderdetails.quantityOrdered) as totalEquipment"
+        + " from customers"
+        + " inner join contacts on customers.customerNumber = contacts.customerNumber"
+        + " inner join orders on contacts.contactNumber = orders.contactNumber"
+        + " inner join orderdetails on orders.orderNumber = orderdetails.orderNumber"
+        + " WHERE customers.customerNumber = " + customer.getId()
+        + " group by customerNumber;";
+
+        try {
+            conn = DBUtil.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            int totalEquipment = 0;
+            if(rs.next()){
+                totalEquipment = rs.getInt(2);
+            }
+            return totalEquipment;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public String getLatestOrder(Customer customer) {
+
+        Connection conn = null;
+
+        String sql = "select customers.customerNumber, MAX(orders.updateDate) as latest, orders.orderNumber"
+        + " from customers"
+        + " inner join contacts on customers.customerNumber = contacts.customerNumber"
+        + " inner join orders on contacts.contactNumber = orders.contactNumber"
+        + " WHERE customers.customerNumber = " + customer.getId()
+        + " GROUP BY customerNumber;";
+
+        try {
+            conn = DBUtil.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            String contactName = "";
+            if(rs.next()){
+                contactName = rs.getString(3);
+            }
+            return contactName;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

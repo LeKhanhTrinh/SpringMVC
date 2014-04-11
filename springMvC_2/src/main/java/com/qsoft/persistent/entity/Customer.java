@@ -7,7 +7,6 @@ public class Customer {
     int id;
     String customerName;
     String avataLink;
-    String contactName;
     String customerPhone;
     String customerAddress;
     String customerFax;
@@ -25,7 +24,6 @@ public class Customer {
         this.id = id;
         this.customerName = customerName;
         this.avataLink = avataLink;
-        this.contactName = contactName;
         this.customerPhone = customerPhone;
         this.customerAddress = customerAddress;
         this.customerFax = customerFax;
@@ -54,14 +52,6 @@ public class Customer {
 
     public String getAvataLink() {
         return avataLink;
-    }
-
-    public String getContactName() {
-        return contactName;
-    }
-
-    public void setContactName(String contactName) {
-        this.contactName = contactName;
     }
 
     public String getCustomerPhone() {
