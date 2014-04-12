@@ -6,17 +6,3 @@
 <h3 style="text-align: center">
     Please  <a href="gotoLogin">login</a> to continue
 </h3>
-
-<button onclick="return popitup('/addContact')">Add Contact</button>
-
-<script>
-    function popitup(url) {
-        var newurl = url;
-        newwindow = window.open(newurl, 'name',
-                'height=280,width=270, left=700, top=150');
-        if (window.focus) {
-            newwindow.focus()
-        }
-        return false;
-    }
-</script>

@@ -7,8 +7,8 @@
 </head>
 <body>
 <div style="text-align: -webkit-center">
-    <!-- <h2 style="color: royalblue;"> Hi ${username}. Welcome to your page!  Click <a href="logout">here</a> to logout </h2>
-    -->
+    <h2 style="color: royalblue;"> Hi ${username}. Welcome to your page!  Click <a href="logout">here</a> to logout </h2>
+
 </div>
 <h1>Customer</h1>
 <hr>
@@ -52,12 +52,14 @@
 
 </table>
 <div class="paging" style="margin-left: 200px">
-    <button onclick="back();">Pre</button>
+    <c:if test="${pagingObject.currentPage != 1}">
+        <a href="#" onclick="back();">Prev</a> &nbsp; &nbsp; &nbsp;
+    </c:if>
 
     <c:if test="${pagingObject.totalPage < 10}">
     <c:forEach begin="1" end="${pagingObject.totalPage}" var="i">
         <c:if test="${i!=pagingObject.currentPage}">
-            <a href="#" id="${i}" onclick="gotoPage(this)"><c:out value="${i}"/></a>
+            &nbsp; &nbsp;  <a href="#" id="${i}" onclick="gotoPage(this)"><c:out value="${i}"/></a> &nbsp; &nbsp;
         </c:if>
         <c:if test="${i==pagingObject.currentPage}">
             <b><c:out value="${i}"/></b>
@@ -69,7 +71,7 @@
         <c:if test="${pagingObject.currentPage > 5}">
             <c:forEach begin="${pagingObject.currentPage-4}" end="${pagingObject.currentPage+5}" var="i">
                 <c:if test="${i!=pagingObject.currentPage}">
-                    <a href="#" id="${i}" onclick="gotoPage(this)"><c:out value="${i}"/></a>
+                    &nbsp; &nbsp;   <a href="#" id="${i}" onclick="gotoPage(this)"><c:out value="${i}"/></a>&nbsp; &nbsp;
                 </c:if>
                 <c:if test="${i==pagingObject.currentPage}">
                     <b><c:out value="currentPage"/></b>
@@ -77,13 +79,14 @@
             </c:forEach>
         </c:if>
     </c:if>
-
-    <button onclick="next()">Next</button>
+    <c:if test="${pagingObject.currentPage < pagingObject.totalPage}">
+        &nbsp;&nbsp;&nbsp; <a href="#" onclick="next()">Next</a>
+    </c:if>
 </div>
 
 <form action="listCustomer" name="listCustomer" method="post">
     <input type="hidden" name="currentPage" id="currentPage" value="${pagingObject.currentPage}">
-    <input type="hidden" name="criteriaSearch" id="criteriaText">
+    <input type="hidden" name="criteriaSearch" id="criteriaText" value="${criteriaSearch}">
 </form>
 
 <form action="customerDetail" name="customerDetailForm" method="post">
@@ -107,6 +110,24 @@
         elem.value = lnk;
         document.listCustomer.submit();
     }
+
+    function back(){
+        var elem = document.getElementById("currentPage");
+        var values = elem.value;
+        if(values > 1){
+            elem.value = values-1;
+            document.listCustomer.submit();
+        }
+    }
+
+    function next(){
+        var elem = document.getElementById("currentPage");
+        var values = elem.value;
+        var intResults = parseInt(values, 10);
+        elem.value = intResults + 1;
+        document.listCustomer.submit();
+    }
+
 
     function setTextSearch(){
         var valueSearch = document.getElementById("criteriaSearch").value;

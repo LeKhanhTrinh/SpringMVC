@@ -23,17 +23,15 @@ public class CustomerController {
         CustomerService customerService = new CustomerService();
         pagingObject = customerService.getListCustomerBusiness(pagingObject, criteriaSearch);
         modelAndView.addObject("pagingObject", pagingObject);
-
+        modelAndView.addObject("criteriaSearch", criteriaSearch);
         return modelAndView;
     }
 
     @RequestMapping(value = "/customerDetail", method = RequestMethod.POST)
-    public ModelAndView login(@RequestParam(value = "customerDetail") String customerName) {
+    public ModelAndView customerDetail(@RequestParam(value = "customerDetail") String customerName) {
         ModelAndView modelAndView = new ModelAndView("customerDetail");
-
         modelAndView.addObject("customerName", customerName);
         System.out.println(customerName);
-
         return modelAndView;
     }
 }

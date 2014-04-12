@@ -12,7 +12,7 @@
 </head>
 <body>
     <h1>Add Contact</h1>
-<form>
+<form method="post">
     <table>
         <tr>
             <td>Name</td>
@@ -37,13 +37,15 @@
         </tr>
         <tr>
             <td></td>
-            <td><button>Save</button> <button>Cancel</button></td>
+            <td><button>Save</button> <button onclick="closewindow()">Cancel</button></td>
         </tr>
     </table>
-
-
-
-
 </form>
 </body>
 </html>
+
+<script>
+    function closewindow(){
+        window.close();
+    }
+</script>

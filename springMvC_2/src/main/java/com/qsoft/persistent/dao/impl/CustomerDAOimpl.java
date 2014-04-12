@@ -91,6 +91,13 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
             throw new RuntimeException(e);
         } catch (Exception e) {
             throw new RuntimeException(e);
+        }finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
         }
     }
 
@@ -121,6 +128,13 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
             throw new RuntimeException(e);
         } catch (Exception e) {
             throw new RuntimeException(e);
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
         }
     }
 
@@ -150,6 +164,13 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
             throw new RuntimeException(e);
         } catch (Exception e) {
             throw new RuntimeException(e);
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
         }
     }
 }
