@@ -109,28 +109,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ListEquipment.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/ListEquipment.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="12" selection-start="308" selection-end="308" vertical-scroll-proportion="0.6723164" vertical-offset="0" max-vertical-offset="391">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="customerDetail.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/customerDetail.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="98" selection-start="761" selection-end="814" vertical-scroll-proportion="-8.653846" vertical-offset="285" max-vertical-offset="1190">
+            <state line="46" column="105" selection-start="1322" selection-end="1322" vertical-scroll-proportion="-1.9615384" vertical-offset="731" max-vertical-offset="1207">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addContact.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/addContact.jsp">
+      <file leaf-file-name="EquipmentController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/EquipmentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="50" selection-start="1260" selection-end="1260" vertical-scroll-proportion="-7.269231" vertical-offset="559" max-vertical-offset="1122">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listCustomer.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/listCustomer.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="7" selection-start="9974" selection-end="9974" vertical-scroll-proportion="0.0" vertical-offset="1615" max-vertical-offset="2601">
+            <state line="12" column="67" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
               <folding />
             </state>
           </provider>
@@ -139,16 +139,16 @@
       <file leaf-file-name="CustomerController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/CustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="24" selection-start="1443" selection-end="1443" vertical-scroll-proportion="0.0" vertical-offset="70" max-vertical-offset="680">
+            <state line="27" column="24" selection-start="1443" selection-end="1443" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactController.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ContactController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/ContactController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="1730" selection-end="1730" vertical-scroll-proportion="0.6375" vertical-offset="204" max-vertical-offset="850">
+            <state line="18" column="5" selection-start="521" selection-end="833" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
               <folding />
             </state>
           </provider>
@@ -190,8 +190,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/test.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/LisEquipment.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/ListOrder.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/ListEquipment.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/presentation/EquipmentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/presentation/OrderController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/persistent/entity/Customer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/presentation/HelloController.java" />
@@ -214,10 +212,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/impl/CustomerDAOimpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/CustomerDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/persistent/entity/Contact.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/customerDetail.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/presentation/CustomerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/presentation/ContactController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/addContact.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/customerDetail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qsoft/presentation/EquipmentController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/ListEquipment.jsp" />
       </list>
     </option>
   </component>
@@ -471,112 +471,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="presentation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springMvC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springMvC_2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qsoft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springMvC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springMvC_2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qsoft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springMvC" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springMvC_2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qsoft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1163,16 +1057,16 @@
       <workItem from="1397285683343" duration="24000" />
       <workItem from="1397286015503" duration="187000" />
       <workItem from="1397286203546" duration="7261000" />
-      <workItem from="1397293940913" duration="1158000" />
+      <workItem from="1397293940913" duration="2674000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88085000" />
+    <option name="totallyTimeSpent" value="89601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1189,15 +1083,15 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2920937" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2971698" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2920937" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2971698" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
@@ -1229,13 +1123,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/customerDetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="49" selection-start="765" selection-end="765" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1190">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/addContact.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="7" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="969">
@@ -1407,13 +1294,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/EquipmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/ListOrder.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="566" />
@@ -1522,20 +1402,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/customerDetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="98" selection-start="761" selection-end="814" vertical-scroll-proportion="-8.653846" vertical-offset="285" max-vertical-offset="1190">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="24" selection-start="1443" selection-end="1443" vertical-scroll-proportion="0.0" vertical-offset="172" max-vertical-offset="680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/addContact.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="50" selection-start="1260" selection-end="1260" vertical-scroll-proportion="-7.269231" vertical-offset="559" max-vertical-offset="1122">
@@ -1543,9 +1409,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/customerDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="105" selection-start="1322" selection-end="1322" vertical-scroll-proportion="-1.9615384" vertical-offset="731" max-vertical-offset="1207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="24" selection-start="1443" selection-end="1443" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/ContactController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1730" selection-end="1730" vertical-scroll-proportion="0.6375" vertical-offset="204" max-vertical-offset="850">
+        <state line="18" column="5" selection-start="521" selection-end="833" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/EquipmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="67" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/ListEquipment.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="12" selection-start="308" selection-end="308" vertical-scroll-proportion="0.6723164" vertical-offset="0" max-vertical-offset="391">
           <folding />
         </state>
       </provider>

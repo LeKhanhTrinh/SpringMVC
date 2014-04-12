@@ -12,5 +12,6 @@
 </head>
 <body>
 <h1>List Equipment</h1>
+${customerId}
 </body>
 </html>

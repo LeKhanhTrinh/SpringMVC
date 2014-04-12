@@ -39,11 +39,12 @@
 
 <button onclick="callEquipmentPage()"> Equipment </button> <button onclick="callOrderPage();"> Order </button><br>
 <iframe width="80%" height="50%" id = "iframeContent"></iframe>
+
 </body>
 </html>
 <script>
     function callEquipmentPage(){
-        document.getElementById("iframeContent").src = "/equipment";
+        document.getElementById("iframeContent").src = "/equipment?customer=${customerInfo.customerNumber}";
     }
 
     function callOrderPage(){
