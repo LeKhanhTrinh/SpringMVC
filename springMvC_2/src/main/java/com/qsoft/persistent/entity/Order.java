@@ -12,7 +12,6 @@ public class Order {
     Customer customer;
     Date creationDate;
     Date updatedDate;
-    List<OrderDetail> orderDetailList;
 
     public Order(int orderNumber, Contact contact, Customer customer, Date creationDate,
                  Date updatedDate) {
@@ -61,13 +60,5 @@ public class Order {
 
     public void setUpdatedDate(Date updatedDate) {
         this.updatedDate = updatedDate;
-    }
-
-    public List<OrderDetail> getOrderDetailList() {
-        return orderDetailList;
-    }
-
-    public void setOrderDetailList(List<OrderDetail> orderDetailList) {
-        this.orderDetailList = orderDetailList;
     }
 }

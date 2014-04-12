@@ -41,7 +41,7 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
                             rs.getInt("customerNumber"), rs.getString("customerName"),
                             rs.getString("avataLink"), rs.getString("phone"),
                             rs.getString("address"), rs.getString("fax"),
-                            rs.getString("emailCustomer"), findContactName(rs.getInt("customerNumber"))));
+                            rs.getString("emailCustomer")));
             }
             // compute total of Page
             int totalPage = totalRow / pagingObject.getSizeOfPage();
@@ -74,9 +74,9 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
     }
 
     @Override
-    public String findContactName(int customerID) {
+    public String findContactName(Customer customer) {
         Connection conn = null;
-        String sql = "Select * from  contacts where isMain = 1 and customerNumber = '" + customerID + "'";
+        String sql = "Select * from  contacts where isMain = 1 and customerNumber = '" + customer.getId() + "'";
         try {
             conn = DBUtil.getConnection();
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -100,12 +100,12 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
         Connection conn = null;
 
         String sql = "select customers.customerNumber, SUM(orderdetails.quantityOrdered) as totalEquipment"
-        + " from customers"
-        + " inner join contacts on customers.customerNumber = contacts.customerNumber"
-        + " inner join orders on contacts.contactNumber = orders.contactNumber"
-        + " inner join orderdetails on orders.orderNumber = orderdetails.orderNumber"
-        + " WHERE customers.customerNumber = " + customer.getId()
-        + " group by customerNumber;";
+                + " from customers"
+                + " inner join contacts on customers.customerNumber = contacts.customerNumber"
+                + " inner join orders on contacts.contactNumber = orders.contactNumber"
+                + " inner join orderdetails on orders.orderNumber = orderdetails.orderNumber"
+                + " WHERE customers.customerNumber = " + customer.getId()
+                + " group by customerNumber;";
 
         try {
             conn = DBUtil.getConnection();
@@ -130,11 +130,11 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
         Connection conn = null;
 
         String sql = "select customers.customerNumber, MAX(orders.updateDate) as latest, orders.orderNumber"
-        + " from customers"
-        + " inner join contacts on customers.customerNumber = contacts.customerNumber"
-        + " inner join orders on contacts.contactNumber = orders.contactNumber"
-        + " WHERE customers.customerNumber = " + customer.getId()
-        + " GROUP BY customerNumber;";
+                + " from customers"
+                + " inner join contacts on customers.customerNumber = contacts.customerNumber"
+                + " inner join orders on contacts.contactNumber = orders.contactNumber"
+                + " WHERE customers.customerNumber = " + customer.getId()
+                + " GROUP BY customerNumber;";
 
         try {
             conn = DBUtil.getConnection();

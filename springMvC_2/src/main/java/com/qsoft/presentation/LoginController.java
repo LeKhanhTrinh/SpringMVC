@@ -15,14 +15,13 @@ import java.util.List;
 public class LoginController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public ModelAndView login(@RequestParam(value = "username") String username,
-                              @RequestParam(value = "password") String password
-    ) {
+                              @RequestParam(value = "password") String password) {
         if (username.equals("admin") && password.equals("123")) {
-            ModelAndView model = new ModelAndView("welcome");
+            ModelAndView model = new ModelAndView("listCustomer");
             model.addObject("username", username);
 
             PagingObject<CustomerBusinessModel> pagingObject = new PagingObject<CustomerBusinessModel>();
-            pagingObject.setCurrentPage(2);
+            pagingObject.setCurrentPage(1);
             pagingObject.setSizeOfPage(5);
             CustomerService customerService = new CustomerService();
             pagingObject = customerService.getListCustomerBusiness(pagingObject, "");
@@ -32,13 +31,13 @@ public class LoginController {
             for (CustomerBusinessModel customer : list) {
                 System.out.println(customer.getCustomerName() + ": " + customer.getContactName());
             }
-            System.out.println(pagingObject.getCurrentPage() + ":" +pagingObject.getTotalPage());
             model.addObject("pagingObject", pagingObject);
             return model;
 
         } else {
             ModelAndView model = new ModelAndView("login");
-            model.addObject("errorLogin", "Username or password is incorrect");
+            String errorLogin = "Username or password is incorrect";
+            model.addObject("errorLogin", errorLogin);
             return model;
         }
     }

@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <script>
@@ -21,10 +23,6 @@
 </head>
 <body style="text-align: -webkit-center">
 <h2>Login</h2>
-<% if (session.getAttribute("errorLogin") != null){
-    String message = (String) session.getAttribute("errorLogin"); %>
-<h4 style="color: red"><%= message %></h4>
-<%}%>
 <form action="login" name="loginForm" onsubmit="return validateFormLogin()" method="POST">
     <table>
         <tr>

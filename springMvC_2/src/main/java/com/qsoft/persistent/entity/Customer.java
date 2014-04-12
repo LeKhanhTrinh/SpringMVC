@@ -20,7 +20,7 @@ public class Customer {
     }
 
     public Customer(int id, String customerName, String avataLink, String customerPhone,
-                    String customerAddress, String customerFax, String customerEmail,  String contactName) {
+                    String customerAddress, String customerFax, String customerEmail) {
         this.id = id;
         this.customerName = customerName;
         this.avataLink = avataLink;
