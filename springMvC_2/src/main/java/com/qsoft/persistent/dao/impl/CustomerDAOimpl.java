@@ -1,6 +1,7 @@
 package com.qsoft.persistent.dao.impl;
 
 import com.qsoft.persistent.dao.CustomerDAO;
+import com.qsoft.persistent.entity.Contact;
 import com.qsoft.persistent.entity.Customer;
 import com.qsoft.util.DBUtil;
 import com.qsoft.util.PagingObject;
@@ -165,6 +166,75 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
         } catch (Exception e) {
             throw new RuntimeException(e);
         } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+    }
+
+    @Override
+    public Customer findCustomerByName(String customerName){
+        Customer tempCustomer = new Customer();
+
+        Connection conn = null;
+
+        String sql = "select * from customers where customerName = \'" + customerName + "\';";
+
+        try {
+            conn = DBUtil.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+
+            if(rs.next()){
+                tempCustomer = new Customer(
+                        rs.getInt("customerNumber"), rs.getString("customerName"),
+                        rs.getString("avataLink"), rs.getString("phone"),
+                        rs.getString("address"), rs.getString("fax"),
+                        rs.getString("emailCustomer"));
+            }
+
+            return tempCustomer;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+    }
+    @Override
+    public Contact findContactByCustomer(Customer customer){
+        Connection conn = null;
+        Contact tempContact = null;
+
+        String sql = "Select * from  contacts where isMain = 1 and customerNumber = '" + customer.getId() + "'";
+        try {
+            conn = DBUtil.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            if(rs.next()){
+                tempContact = new Contact(
+                        rs.getInt("contactNumber"),
+                        rs.getString("contactName"), rs.getString("phone"),
+                        rs.getString("email"), rs.getString("jobTitle"),
+                        rs.getBoolean("isMain"));
+            }
+            return tempContact;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }finally {
             if (conn != null) {
                 try {
                     conn.close();

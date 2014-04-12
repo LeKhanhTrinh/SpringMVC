@@ -12,7 +12,7 @@
 </head>
 <body>
     <h1>Add Contact</h1>
-<form method="post">
+<form method="post" action="/addContact">
     <table>
         <tr>
             <td>Name</td>
@@ -29,7 +29,7 @@
         </tr>
         <tr>
             <td>Job title </td>
-            <td><input type="text" name="mailContact"></td>
+            <td><input type="text" name="jobTitle"></td>
         </tr>
         <tr>
             <td></td>
@@ -37,9 +37,10 @@
         </tr>
         <tr>
             <td></td>
-            <td><button>Save</button> <button onclick="closewindow()">Cancel</button></td>
+            <td><input type="submit" value="Save"> <button onclick="closewindow()">Cancel</button></td>
         </tr>
     </table>
+    <input type="hidden" name="customerId" id="customerId" value="${customerId}">
 </form>
 </body>
 </html>

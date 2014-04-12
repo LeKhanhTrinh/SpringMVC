@@ -1,8 +1,10 @@
 package com.qsoft.business.service;
 
 import com.qsoft.business.model.CustomerBusinessModel;
+import com.qsoft.business.model.CustomerBusinessModelDetail;
 import com.qsoft.persistent.dao.CustomerDAO;
 import com.qsoft.persistent.dao.impl.CustomerDAOimpl;
+import com.qsoft.persistent.entity.Contact;
 import com.qsoft.persistent.entity.Customer;
 import com.qsoft.util.PagingObject;
 import org.springframework.context.ApplicationContext;
@@ -63,12 +65,33 @@ public class CustomerService {
         return customerBusinessModelList;
     }
 
+    public CustomerBusinessModelDetail findDetailByNameCustomer(String nameCus){
 
-    int getTotalEquipment(String customerName){
-        return 0;
+        CustomerBusinessModelDetail customerBusinessModelDetail = new CustomerBusinessModelDetail();
+        customerBusinessModelDetail.setCustomerName(nameCus);
+        CustomerDAO customerDAO = new CustomerDAOimpl();
+
+        Customer customer = customerDAO.findCustomerByName(nameCus);
+        Contact contact = customerDAO.findContactByCustomer(customer);
+
+        customerBusinessModelDetail.setAddress(customer.getCustomerAddress());
+        customerBusinessModelDetail.setConPhone(customer.getCustomerPhone());
+        customerBusinessModelDetail.setCusFax(customer.getCustomerFax());
+        customerBusinessModelDetail.setContactName(contact.getContactName());
+        customerBusinessModelDetail.setCusPhone(contact.getPhone());
+        customerBusinessModelDetail.setConEmail(contact.getEmail());
+        customerBusinessModelDetail.setAvt(customer.getAvataLink());
+        customerBusinessModelDetail.setCustomerNumber(customer.getId());
+
+        return customerBusinessModelDetail;
     }
 
-    String getLatestOrder(String cútomerName){
-        return "";
+
+
+    public Customer findCustomerByName (String customerName){
+        CustomerDAO customerDAO = new CustomerDAOimpl();
+        Customer customer = customerDAO.findCustomerByName(customerName);
+        return customer;
     }
+
 }

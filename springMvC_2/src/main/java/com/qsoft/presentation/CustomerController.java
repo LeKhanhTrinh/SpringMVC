@@ -1,7 +1,9 @@
 package com.qsoft.presentation;
 
 import com.qsoft.business.model.CustomerBusinessModel;
+import com.qsoft.business.model.CustomerBusinessModelDetail;
 import com.qsoft.business.service.CustomerService;
+import com.qsoft.persistent.entity.Customer;
 import com.qsoft.util.PagingObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,6 +33,10 @@ public class CustomerController {
     public ModelAndView customerDetail(@RequestParam(value = "customerDetail") String customerName) {
         ModelAndView modelAndView = new ModelAndView("customerDetail");
         modelAndView.addObject("customerName", customerName);
+        CustomerService customerService = new CustomerService();
+        CustomerBusinessModelDetail customerBusinessModelDetail = customerService.findDetailByNameCustomer(customerName);
+
+        modelAndView.addObject("customerInfo", customerBusinessModelDetail);
         System.out.println(customerName);
         return modelAndView;
     }

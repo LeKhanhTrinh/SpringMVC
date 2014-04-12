@@ -83,8 +83,8 @@ public class OrderDAOimpl implements OrderDAO {
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                contactList.add( new Contact(
-                        rs.getInt("contactNumber"), customer,
+                contactList.add( new Contact(customer,
+                        rs.getString("contactName"),
                         rs.getString("phone"), rs.getString("email"),
                         rs.getString("jobTitle"), rs.getBoolean("isMain")
                         ));

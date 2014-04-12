@@ -3,14 +3,27 @@ package com.qsoft.persistent.entity;
 public class Contact {
     int contactNumber;
     Customer customer;
+    String contactName;
     String phone;
     String email;
     String jobTitle;
     boolean isMain;
 
-    public Contact(int contactNumber, Customer customer, String phone, String email, String jobTitle, boolean isMain) {
-        this.contactNumber = contactNumber;
+    public Contact() {
+    }
+
+    public Contact(Customer customer, String contactName,  String phone, String email, String jobTitle, boolean isMain) {
         this.customer = customer;
+        this.contactName = contactName;
+        this.phone = phone;
+        this.email = email;
+        this.jobTitle = jobTitle;
+        this.isMain = isMain;
+    }
+
+    public Contact(int contactNumber,String contactName, String phone, String email, String jobTitle, boolean isMain) {
+        this.contactNumber = contactNumber;
+        this.contactName = contactName;
         this.phone = phone;
         this.email = email;
         this.jobTitle = jobTitle;
@@ -32,6 +45,15 @@ public class Contact {
     public Customer getCustomer() {
         return customer;
     }
+
+    public String getContactName() {
+        return contactName;
+    }
+
+    public void setContactName(String contactName) {
+        this.contactName = contactName;
+    }
+
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
