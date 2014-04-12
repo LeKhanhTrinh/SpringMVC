@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -12,6 +13,7 @@
 </head>
 <body>
     <h1>Add Contact</h1>
+<c:if test="${confirm != 1}">
 <form method="post" action="/addContact">
     <table>
         <tr>
@@ -42,6 +44,12 @@
     </table>
     <input type="hidden" name="customerId" id="customerId" value="${customerId}">
 </form>
+</c:if>
+
+<c:if test="${confirm == 1}">
+    <a href="/goAddContact?customer=${customerId}">Add more</a> <br>
+    <button onclick="closewindow()">Cancel</button></td>
+</c:if>
 </body>
 </html>
 

@@ -34,10 +34,10 @@ public class ContactController {
 
 
         ContactService  contactService = new ContactService();
-        System.out.println(contactService.inserContact(contactBusinessModel));
-
-
-
+        if (contactService.inserContact(contactBusinessModel)){
+            modelAndView.addObject("confirm", 1);
+            modelAndView.addObject("customerId", customerId);
+        }
         return  modelAndView;
     }
 
