@@ -40,12 +40,4 @@ public class ContactController {
         }
         return  modelAndView;
     }
-
-    public static void main(String[] args) {
-        Customer customer = new Customer(1);
-        ContactBusinessModel contactBusinessModel = new ContactBusinessModel(
-                customer, "b", "b", "b", "b", true);
-        ContactService  contactService = new ContactService();
-        System.out.println(contactService.inserContact(contactBusinessModel));
-    }
 }
