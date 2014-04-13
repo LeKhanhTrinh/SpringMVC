@@ -108,6 +108,68 @@ public class OrderDAOimpl implements OrderDAO {
 
     }
 
+    @Override
+    public String findContactName(Customer customer) {
+        Connection conn = null;
+        String sql = "Select * from  contacts where isMain = 1 and customerNumber = '" + customer.getId() + "'";
+        try {
+            conn = DBUtil.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            String contactName = "";
+            if(rs.next()){
+                contactName = rs.getString(3);
+            }
+            return contactName;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+    }
+
+    @Override
+    public int getTotalAmount(int orderNumber){
+
+        Connection conn = null;
+        String sql = "select orders.orderNumber, SUM(orderdetails.priceEach*orderdetails.quantityOrdered) as Total_Amount"
+        + " from orders"
+        + " inner join orderdetails on orders.orderNumber = orderdetails.orderNumber"
+        + " where orders.orderNumber = " + orderNumber
+        + " group by orders.orderNumber;";
+
+        try {
+            conn = DBUtil.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            int totalAmount = 0;
+            if(rs.next()){
+                totalAmount = rs.getInt(2);
+            }
+            return totalAmount;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+    }
+
     public static void main(String[] args) {
         OrderDAO orderDAO = new OrderDAOimpl();
         PagingObject<Order> pagingObject = new PagingObject<Order>();

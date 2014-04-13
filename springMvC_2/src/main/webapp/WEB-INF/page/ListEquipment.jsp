@@ -14,7 +14,7 @@
 <body>
 <h1>List Equipment</h1>
 
-<table width="1200px" style="margin-left: 50px;">
+<table width="90%" style="margin-left: 50px;">
     <tr>
         <td style="width:25%">Serial</td>
         <td style="width:25%">Manufacturer</td>

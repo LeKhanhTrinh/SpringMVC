@@ -13,4 +13,8 @@ import java.util.List;
 public interface OrderDAO {
    // List<OrderDetail> getListOrderDetailsByOrder(Order order);
     PagingObject<Order> getListOrdersDAO(PagingObject<Order> orderPagingObject, Customer customer);
+
+    String findContactName(Customer customer);
+
+    int getTotalAmount(int orderNumber);
 }
