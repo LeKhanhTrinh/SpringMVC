@@ -3,9 +3,16 @@ package com.qsoft.persistent.entity;
 public class Product {
     String serialProduct;
     String productName;
-    String ProductLine;
+    ProductLine ProductLine;
     String modelProduct;
     int year;
+
+    public Product(String serialProduct, ProductLine productLine, String modelProduct, int year) {
+        this.serialProduct = serialProduct;
+        ProductLine = productLine;
+        this.modelProduct = modelProduct;
+        this.year = year;
+    }
 
     public String getSerialProduct() {
         return serialProduct;
@@ -23,11 +30,11 @@ public class Product {
         this.productName = productName;
     }
 
-    public String getProductLine() {
+    public ProductLine getProductLine() {
         return ProductLine;
     }
 
-    public void setProductLine(String productLine) {
+    public void setProductLine(ProductLine productLine) {
         ProductLine = productLine;
     }
 
