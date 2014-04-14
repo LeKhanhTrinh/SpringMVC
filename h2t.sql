@@ -76,7 +76,7 @@ INSERT INTO `contacts` (`customerNumber`, `contactNumber`, `contactName`, `phone
 
 CREATE TABLE IF NOT EXISTS `customers` (
   `customerNumber` int(11) NOT NULL AUTO_INCREMENT,
-  `avataLink` varchar(100) DEFAULT NULL,
+  `avataLink` varchar(300) DEFAULT NULL,
   `customerName` varchar(50) NOT NULL,
   `phone` varchar(50) NOT NULL,
   `address` varchar(50) NOT NULL,
@@ -90,8 +90,8 @@ CREATE TABLE IF NOT EXISTS `customers` (
 --
 
 INSERT INTO `customers` (`customerNumber`, `avataLink`, `customerName`, `phone`, `address`, `fax`, `emailCustomer`) VALUES
-(1, 'http://www.qsoftvietnam.com/themes/qsoft_revamp10/images/qs_logo.gif', 'QSoftVietnam', '(+844) 3792 5148', 'Nbr 22, road number 3, Tran Thai Tong Street, Cau ', '+84 4 666 999', ' contact@qsoftvietnam.com'),
-(2, 'http://www.qsoftvietnam.com/themes/qsoft_revamp10/images/qs_logo.gif', 'Công ty Cổ Phần Viễn Thông FPT', ' +84 4 73007300', 'Trụ sở chính: Tòa nhà FPT, lô B2  Phố Duy Tân  Đườ', '+84 4 37687410', 'contact@fpt.com'),
+(1, 'http://s3.amazonaws.com/crunchbase_prod_assets/assets/images/resized/0015/3878/153878v2-max-250x250.png', 'QSoftVietnam', '(+844) 3792 5148', 'Nbr 22, road number 3, Tran Thai Tong Street, Cau ', '+84 4 666 999', ' contact@qsoftvietnam.com'),
+(2, 'http://s3.amazonaws.com/crunchbase_prod_assets/assets/images/resized/0015/3878/153878v2-max-250x250.png', 'Công ty Cổ Phần Viễn Thông FPT', ' +84 4 73007300', 'Trụ sở chính: Tòa nhà FPT, lô B2  Phố Duy Tân  Đườ', '+84 4 37687410', 'contact@fpt.com'),
 (3, 'http://www.qsoftvietnam.com/images/banner/1281685557_home_design.jpg', 'VNPT', '(+844) 3792 5148', 'Nbr 22, road number 3, Cau Giay Street, Cau ', '+84 4 666 999', ' contact@vnpt.com'),
 (4, 'http://www.qsoftvietnam.com/images/banner/1277964490_mobile_application.jpg', 'Viettel Telecom', '(+844) 3792 5148', 'Nbr 22, road number 3, Cau Giay Street', '+84 4 666 999', ' contact@viettel.com'),
 (5, 'http://www.qsoftvietnam.com/images/banner/1277964490_mobile_application.jpg', 'Vinova', '(+844) 3792 5148', 'Nbr 22, road number 3, Cau Giay Street, Cau ', '+84 4 666 999', ' contact@vinova.com'),
