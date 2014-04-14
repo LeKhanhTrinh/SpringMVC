@@ -12,6 +12,12 @@ public class Order {
     Date creationDate;
     Date updatedDate;
 
+    public Order(int orderNumber, Date creationDate, Date updatedDate) {
+        this.orderNumber = orderNumber;
+        this.creationDate = creationDate;
+        this.updatedDate = updatedDate;
+    }
+
     public Order(int orderNumber, Contact contact, Customer customer, Date creationDate,
                  Date updatedDate) {
         this.orderNumber = orderNumber;

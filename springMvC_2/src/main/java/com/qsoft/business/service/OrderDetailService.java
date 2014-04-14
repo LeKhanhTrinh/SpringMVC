@@ -49,4 +49,13 @@ public class OrderDetailService {
         return total;
     }
 
+    public static void main(String[] args) {
+        OrderDetailService orderDetailService = new OrderDetailService();
+        List<OrderDetailBusinessModel> orderDetailBusinessModelList =
+                orderDetailService.getListOrderDetailBusinessModel(new Customer(1), new Order(1));
+        for (OrderDetailBusinessModel orderDetailBusinessModel : orderDetailBusinessModelList) {
+            System.out.println(orderDetailBusinessModel.getDescription() + ", " + orderDetailBusinessModel.getQuantityOrdered()
+                    + ", " + orderDetailBusinessModel.getPriceEach());
+        }
+    }
 }

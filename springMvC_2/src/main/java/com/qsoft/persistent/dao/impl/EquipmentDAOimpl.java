@@ -110,4 +110,17 @@ public class EquipmentDAOimpl implements EquipmentDAO {
         }
         return null;
     }
+
+    public static void main(String[] args) {
+        EquipmentDAO equipmentDAO = new EquipmentDAOimpl();
+        PagingObject<Product> productPagingObject = new PagingObject<Product>();
+        productPagingObject.setCurrentPage(1);
+        productPagingObject.setSizeOfPage(5);
+        Customer customer = new Customer(1);
+        productPagingObject = equipmentDAO.getListEquipmentDAO(productPagingObject, customer);
+        for (Product product : productPagingObject.getObjects()) {
+            System.out.println(product.getSerialProduct() + ":" + product.getProductLine().getName()
+                    + ": " + product.getModelProduct() + ":" + product.getYear());
+        }
+    }
 }

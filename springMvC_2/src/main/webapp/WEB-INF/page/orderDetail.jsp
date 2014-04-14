@@ -13,7 +13,9 @@
     <title>OrderDetail</title>
 </head>
 <body>
-<h1> Order Detail: ${orderID}</h1>
+<h1> Order Detail # ${orderID}</h1>
+
+<h3> ${creationDate}</h3>
 <br>
 <hr>
 

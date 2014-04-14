@@ -5,6 +5,7 @@ import com.qsoft.persistent.entity.Order;
 import com.qsoft.persistent.entity.OrderDetail;
 import com.qsoft.util.PagingObject;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -17,6 +18,10 @@ public interface OrderDAO {
     String findContactName(Customer customer);
 
     int getTotalAmount(int orderNumber);
+
+    Order getOrderFromId(int id);
+
+    Date getCreationDateFromId(int id);
 
     List<OrderDetail> getListOrderDetailFromOrder(Order order);
 }

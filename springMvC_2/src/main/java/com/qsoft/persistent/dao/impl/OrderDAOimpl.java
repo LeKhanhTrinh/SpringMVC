@@ -9,7 +9,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -203,6 +205,76 @@ public class OrderDAOimpl implements OrderDAO {
                 } catch (SQLException e) {
                 }
             }
+        }
+    }
+
+    public Order getOrderFromId(int id) {
+
+        Connection conn = null;
+        String sql = "Select * from orders where orderNumber = " + id;
+        Order order = null;
+
+        try {
+            conn = DBUtil.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            String contactName = "";
+            if (rs.next()) {
+                order = new Order(rs.getInt(1), rs.getDate(3), rs.getDate(4));
+            }
+            return order;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+    }
+
+    public Date getCreationDateFromId(int id) {
+        Date creationDate = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
+        Connection conn = null;
+        String sql = "Select creationDate from orders where orderNumber = " + id;
+        try {
+            conn = DBUtil.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            String contactName = "";
+            if (rs.next()) {
+                contactName = rs.getString(1);
+            }
+            creationDate = formatter.parse(contactName);
+            return creationDate;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        OrderDAO orderDAO = new OrderDAOimpl();
+        List<OrderDetail> orderDetailList = orderDAO.getListOrderDetailFromOrder(new Order(1));
+        for (OrderDetail order : orderDetailList) {
+            System.out.println(order.getOrder().getOrderNumber() + ": " + order.getQuantityOrdered() + ": "
+                    + order.getPriceEach());
         }
     }
 }

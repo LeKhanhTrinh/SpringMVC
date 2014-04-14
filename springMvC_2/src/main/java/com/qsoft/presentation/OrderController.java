@@ -1,6 +1,6 @@
 package com.qsoft.presentation;
 
-import com.qsoft.business.model.OrderListBusinessModel;
+import com.qsoft.business.model.OrderBusinessModel;
 import com.qsoft.business.service.OrderService;
 import com.qsoft.persistent.entity.Customer;
 import com.qsoft.util.PagingObject;
@@ -16,7 +16,7 @@ public class OrderController {
     public ModelAndView goOrderFirst(@RequestParam("customer") String customerID) {
         ModelAndView modelAndView = new ModelAndView("ListOrder");
 
-        PagingObject<OrderListBusinessModel> orderListBusinessModelPagingObject = new PagingObject<OrderListBusinessModel>();
+        PagingObject<OrderBusinessModel> orderListBusinessModelPagingObject = new PagingObject<OrderBusinessModel>();
         orderListBusinessModelPagingObject.setCurrentPage(1);
         orderListBusinessModelPagingObject.setSizeOfPage(5);
 
@@ -29,7 +29,7 @@ public class OrderController {
         modelAndView.addObject("customerId", idCustomer);
         modelAndView.addObject("pagingObject", orderListBusinessModelPagingObject);
 
-        for (OrderListBusinessModel model : orderListBusinessModelPagingObject.getObjects()) {
+        for (OrderBusinessModel model : orderListBusinessModelPagingObject.getObjects()) {
             System.out.println(model.getContactName());
         }
         return modelAndView;
@@ -41,8 +41,8 @@ public class OrderController {
 
         ModelAndView modelAndView = new ModelAndView("ListOrder");
 
-        PagingObject<OrderListBusinessModel> orderListBusinessModelPagingObject =
-                new PagingObject<OrderListBusinessModel>();
+        PagingObject<OrderBusinessModel> orderListBusinessModelPagingObject =
+                new PagingObject<OrderBusinessModel>();
         orderListBusinessModelPagingObject.setCurrentPage(Integer.parseInt(currentPage));
         orderListBusinessModelPagingObject.setSizeOfPage(5);
         int idCustomer = Integer.parseInt(customerID);

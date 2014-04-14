@@ -14,9 +14,9 @@
 
     <tr>
         <td rowspan="5" style="width:20%">
-            <img src = "${customerInfo.avt}" width="100px" height="100px"/>
+            <img src="${customerInfo.avt}" width="100px" height="100px"/>
         </td>
-        <td style="width:35%" clospan="3" >${customerInfo.customerName}</td>
+        <td style="width:35%" clospan="3">${customerInfo.customerName}</td>
 
     </tr>
     <tr>
@@ -29,7 +29,10 @@
     </tr>
     <tr>
         <td>${customerInfo.contactName}</td>
-        <td><button onclick="return popitup('/goAddContact?customer=${customerInfo.customerNumber}')">Add Contact</button></td>
+        <td>
+            <button onclick="return popitup('/goAddContact?customer=${customerInfo.customerNumber}')">Add Contact
+            </button>
+        </td>
     </tr>
     <tr>
         <td>Tel:${customerInfo.conPhone}</td>
@@ -38,17 +41,19 @@
 </table>
 
 
-<button onclick="callEquipmentPage()"> Equipment </button> <button onclick="callOrderPage();"> Order </button><br>
-<iframe width="80%" height="50%" id = "iframeContent"></iframe>
+<button onclick="callEquipmentPage()"> Equipment</button>
+<button onclick="callOrderPage();"> Order</button>
+<br>
+<iframe width="80%" height="50%" id="iframeContent" src="/equipment?customer=${customerInfo.customerNumber}"></iframe>
 
 </body>
 </html>
 <script>
-    function callEquipmentPage(){
+    function callEquipmentPage() {
         document.getElementById("iframeContent").src = "/equipment?customer=${customerInfo.customerNumber}";
     }
 
-    function callOrderPage(){
+    function callOrderPage() {
         document.getElementById("iframeContent").src = "/order?customer=${customerInfo.customerNumber}";
     }
     function popitup(url) {

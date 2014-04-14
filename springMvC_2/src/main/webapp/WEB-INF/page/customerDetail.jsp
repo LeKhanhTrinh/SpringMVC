@@ -44,7 +44,7 @@
 <button onclick="callEquipmentPage()"> Equipment</button>
 <button onclick="callOrderPage();"> Order</button>
 <br>
-<iframe width="80%" height="50%" id="iframeContent"></iframe>
+<iframe width="80%" height="50%" id="iframeContent" src="/equipment?customer=${customerInfo.customerNumber}"></iframe>
 
 </body>
 </html>

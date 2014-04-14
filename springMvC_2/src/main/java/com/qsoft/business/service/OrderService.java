@@ -1,6 +1,6 @@
 package com.qsoft.business.service;
 
-import com.qsoft.business.model.OrderListBusinessModel;
+import com.qsoft.business.model.OrderBusinessModel;
 import com.qsoft.persistent.dao.CustomerDAO;
 import com.qsoft.persistent.dao.OrderDAO;
 import com.qsoft.persistent.dao.impl.CustomerDAOimpl;
@@ -17,8 +17,8 @@ import java.util.List;
  */
 public class OrderService {
 
-    public PagingObject<OrderListBusinessModel> getListOrderBusinessModel(
-            PagingObject<OrderListBusinessModel> pagingObject, Customer customer) {
+    public PagingObject<OrderBusinessModel> getListOrderBusinessModel(
+            PagingObject<OrderBusinessModel> pagingObject, Customer customer) {
 
         PagingObject<Order> orderPagingObject = new PagingObject<Order>();
         orderPagingObject.setCurrentPage(pagingObject.getCurrentPage());
@@ -30,7 +30,7 @@ public class OrderService {
 
         // convert orderList to orderListBusinessModelList....
         List<Order> orderList = orderPagingObject.getObjects();
-        PagingObject<OrderListBusinessModel> orderListBusinessModelPagingObject = new PagingObject<OrderListBusinessModel>();
+        PagingObject<OrderBusinessModel> orderListBusinessModelPagingObject = new PagingObject<OrderBusinessModel>();
 
         //set values for pagingObject
         orderListBusinessModelPagingObject.setCurrentPage(orderPagingObject.getCurrentPage());
@@ -42,11 +42,11 @@ public class OrderService {
 
     }
 
-    List<OrderListBusinessModel> getListOrderListBusinessModelFromOrderList(List<Order> orderList, Customer customer) {
+    List<OrderBusinessModel> getListOrderListBusinessModelFromOrderList(List<Order> orderList, Customer customer) {
 
-        List<OrderListBusinessModel> orderListBusinessModelList = new ArrayList<OrderListBusinessModel>();
+        List<OrderBusinessModel> orderListBusinessModelList = new ArrayList<OrderBusinessModel>();
         for (Order order : orderList) {
-            OrderListBusinessModel orderListBusinessModel = new OrderListBusinessModel();
+            OrderBusinessModel orderListBusinessModel = new OrderBusinessModel();
             CustomerDAO customerDAO = new CustomerDAOimpl();
             OrderDAO orderDAO = new OrderDAOimpl();
 
@@ -62,4 +62,26 @@ public class OrderService {
         return orderListBusinessModelList;
     }
 
+    public OrderBusinessModel getOrderFromId(int id) {
+        OrderDAO orderDAOimpl = new OrderDAOimpl();
+        Order order = orderDAOimpl.getOrderFromId(id);
+        OrderBusinessModel orderBusinessModel = new OrderBusinessModel();
+        orderBusinessModel.setCreationDate(order.getCreationDate());
+        orderBusinessModel.setUpdateDate(order.getUpdatedDate());
+        return orderBusinessModel;
+    }
+
+    public static void main(String[] args) {
+        OrderService orderService = new OrderService();
+        PagingObject<OrderBusinessModel> orderListBusinessModelPagingObject = new PagingObject<OrderBusinessModel>();
+        orderListBusinessModelPagingObject.setCurrentPage(1);
+        orderListBusinessModelPagingObject.setSizeOfPage(5);
+        Customer customer = new Customer(3);
+        orderListBusinessModelPagingObject = orderService.getListOrderBusinessModel(orderListBusinessModelPagingObject, customer);
+
+        for (OrderBusinessModel orderListBusinessModel : orderListBusinessModelPagingObject.getObjects()) {
+            System.out.println(orderListBusinessModel.getOrderNumber() + ":" + orderListBusinessModel.getContactName()
+                    + ": " + orderListBusinessModel.getTotalAmount() + ":" + orderListBusinessModel.getCreationDate());
+        }
+    }
 }

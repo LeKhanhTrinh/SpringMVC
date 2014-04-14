@@ -1,9 +1,11 @@
 package com.qsoft.presentation;
 
 import com.qsoft.business.model.CustomerBusinessModelDetail;
+import com.qsoft.business.model.OrderBusinessModel;
 import com.qsoft.business.model.OrderDetailBusinessModel;
 import com.qsoft.business.service.CustomerService;
 import com.qsoft.business.service.OrderDetailService;
+import com.qsoft.business.service.OrderService;
 import com.qsoft.persistent.entity.Customer;
 import com.qsoft.persistent.entity.Order;
 import org.springframework.stereotype.Controller;
@@ -25,12 +27,19 @@ public class OrderDetailController {
         ModelAndView modelAndView = new ModelAndView("orderDetail");
         modelAndView.addObject("orderID", orderId);
 
+
         CustomerService customerService = new CustomerService();
         CustomerBusinessModelDetail customerBusinessModelDetail =
                 customerService.findDetailByCustomerId(Integer.parseInt(customerID));
         modelAndView.addObject("customerInfo", customerBusinessModelDetail);
 
         Customer customer = new Customer(Integer.parseInt(customerID));
+
+
+        OrderService orderService = new OrderService();
+        OrderBusinessModel orderBusinessModel = orderService.getOrderFromId(Integer.parseInt(orderId));
+        modelAndView.addObject("creationDate", orderBusinessModel.getCreationDate());
+
         Order order = new Order(Integer.parseInt(orderId));
         OrderDetailService orderDetailService = new OrderDetailService();
         List<OrderDetailBusinessModel> orderDetailList =
