@@ -33,8 +33,6 @@ public class EquipmentController {
             System.out.println(model.getSerialProduct());
         }
 
-        System.out.println("CurrentPage" + equipmentBusinessModelPagingObject.getCurrentPage()
-        + "Total Page" + equipmentBusinessModelPagingObject.getTotalPage());
         return modelAndView;
     }
 

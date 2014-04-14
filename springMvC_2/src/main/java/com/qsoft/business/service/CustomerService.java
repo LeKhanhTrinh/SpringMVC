@@ -86,6 +86,26 @@ public class CustomerService {
         return customerBusinessModelDetail;
     }
 
+    public CustomerBusinessModelDetail findDetailByCustomerId(int idCustomer){
+
+        CustomerBusinessModelDetail customerBusinessModelDetail = new CustomerBusinessModelDetail();
+        customerBusinessModelDetail.setCustomerNumber(idCustomer);
+        CustomerDAO customerDAO = new CustomerDAOimpl();
+
+        Customer customer = customerDAO.findDetailByCustomerId(idCustomer);
+        Contact contact = customerDAO.findContactByCustomer(customer);
+
+        customerBusinessModelDetail.setCustomerName(customer.getCustomerName());
+        customerBusinessModelDetail.setAddress(customer.getCustomerAddress());
+        customerBusinessModelDetail.setConPhone(customer.getCustomerPhone());
+        customerBusinessModelDetail.setCusFax(customer.getCustomerFax());
+        customerBusinessModelDetail.setContactName(contact.getContactName());
+        customerBusinessModelDetail.setCusPhone(contact.getPhone());
+        customerBusinessModelDetail.setConEmail(contact.getEmail());
+        customerBusinessModelDetail.setAvt(customer.getAvataLink());
+
+        return customerBusinessModelDetail;
+    }
 
 
     public Customer findCustomerByName (String customerName){

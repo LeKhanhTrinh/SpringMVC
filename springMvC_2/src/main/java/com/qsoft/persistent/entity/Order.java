@@ -22,6 +22,10 @@ public class Order {
         this.updatedDate = updatedDate;
     }
 
+    public Order(int orderNumber) {
+        this.orderNumber = orderNumber;
+    }
+
     public int getOrderNumber() {
         return orderNumber;
     }

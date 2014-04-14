@@ -29,12 +29,13 @@ public class OrderService {
         orderPagingObject = orderDAOimpl.getListOrdersDAO(orderPagingObject, customer);
 
         // convert orderList to orderListBusinessModelList....
-        List<Order> orderList = orderDAOimpl.getListOrdersDAO(orderPagingObject, customer).getObjects();
+        List<Order> orderList = orderPagingObject.getObjects();
         PagingObject<OrderListBusinessModel> orderListBusinessModelPagingObject = new PagingObject<OrderListBusinessModel>();
 
         //set values for pagingObject
-        orderListBusinessModelPagingObject.setCurrentPage(pagingObject.getCurrentPage());
-        orderListBusinessModelPagingObject.setSizeOfPage(pagingObject.getSizeOfPage());
+        orderListBusinessModelPagingObject.setCurrentPage(orderPagingObject.getCurrentPage());
+        orderListBusinessModelPagingObject.setSizeOfPage(orderPagingObject.getSizeOfPage());
+        orderListBusinessModelPagingObject.setTotalPage(orderPagingObject.getTotalPage());
         orderListBusinessModelPagingObject.setObjects(getListOrderListBusinessModelFromOrderList(orderList,customer));
 
         return orderListBusinessModelPagingObject;

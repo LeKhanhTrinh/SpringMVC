@@ -77,6 +77,39 @@ public class EquipmentDAOimpl implements EquipmentDAO {
         return productPagingObject;
     }
 
+    @Override
+    public Product findProductByIdProduct(String serialProduct){
+        Customer tempCustomer = new Customer();
+
+        Connection conn = null;
+
+        String sql = "select * from products where serial = \'" + serialProduct + "\';";
+
+        try {
+            conn = DBUtil.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+
+            if(rs.next()){
+                Product product = new Product(serialProduct, new ProductLine(rs.getString("idProductLine")),
+                        rs.getString("model"), rs.getInt("years"));
+                return product;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+        return null;
+    }
     public static void main(String[] args) {
         EquipmentDAO equipmentDAO = new EquipmentDAOimpl();
         PagingObject<Product> productPagingObject = new PagingObject<Product>();

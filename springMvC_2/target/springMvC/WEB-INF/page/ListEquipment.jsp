@@ -23,7 +23,6 @@
         <td style="width:25%">Year</td>
 
     </tr>
-    ${pagingObject.currentPage} / ${pagingObject.totalPage}
     <c:forEach var="listValue" items="${pagingObject.objects}">
         <tr>
             <td style="width:25%"><c:out value="${listValue.serialProduct}"/></td>
@@ -102,4 +101,9 @@
 </script>
 
 <style>
+    .paging{
+        top: 270px;
+        left: 300px;
+        position: absolute;
+    }
 </style>

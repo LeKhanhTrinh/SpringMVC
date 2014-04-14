@@ -1,9 +1,7 @@
 package com.qsoft.persistent.dao.impl;
 
 import com.qsoft.persistent.dao.OrderDAO;
-import com.qsoft.persistent.entity.Contact;
-import com.qsoft.persistent.entity.Customer;
-import com.qsoft.persistent.entity.Order;
+import com.qsoft.persistent.entity.*;
 import com.qsoft.util.DBUtil;
 import com.qsoft.util.PagingObject;
 
@@ -21,17 +19,22 @@ public class OrderDAOimpl implements OrderDAO {
     @Override
     // this function use to show list Order in a customer
     public PagingObject<Order> getListOrdersDAO(PagingObject<Order> pagingObject, Customer customer) {
+
         PagingObject<Order> orderPagingObject = new PagingObject<Order>();
-        orderPagingObject.setCurrentPage(orderPagingObject.getCurrentPage());
-        orderPagingObject.setSizeOfPage(orderPagingObject.getSizeOfPage());
+        orderPagingObject.setCurrentPage(pagingObject.getCurrentPage());
+        orderPagingObject.setSizeOfPage(pagingObject.getSizeOfPage());
 
         // getList Order
         int totalRow = 0;
         List<Order> orderList = new ArrayList<Order>();
-        for(Contact contact: getListContactByCustomer(customer)){
             Connection conn = null;
-            String sql = "Select * from  orders where contactNumber = '" + contact.getContactNumber() + "'" +
-                    " ORDER BY updateDate DESC";
+            String sql = "select customers.customerNumber, orders.orderNumber, contacts.contactNumber, orders.creationDate, orders.updateDate\n" +
+                    "from orders\n" +
+                    "inner join orderdetails on orders.orderNumber = orderdetails.orderNumber\n" +
+                    "inner join contacts on orders.contactNumber = contacts.contactNumber\n" +
+                    "inner join customers on customers.customerNumber = contacts.customerNumber\n" +
+                    "where customers.customerNumber = 1\n" +
+                    "group by orders.orderNumber;";
             try {
                 conn = DBUtil.getConnection();
                 PreparedStatement ps = conn.prepareStatement(sql);
@@ -68,9 +71,8 @@ public class OrderDAOimpl implements OrderDAO {
                 orderPagingObject.setObjects(null);
             else
                 orderPagingObject.setObjects(orderList);
-
             orderPagingObject.setTotalPage(totalPage);
-        }
+
         return orderPagingObject;
     }
 
@@ -170,17 +172,46 @@ public class OrderDAOimpl implements OrderDAO {
         }
     }
 
+    @Override
+    public List<OrderDetail> getListOrderDetailFromOrder(Order order) {
+        int orderId = order.getOrderNumber();
+        Connection conn = null;
+        String sqlGetListOrderDetail = "Select * from orderdetails where ordernumber = '" +orderId+"'";
+
+        List<OrderDetail> orderDetailList = new ArrayList<OrderDetail>();
+        try {
+            conn = DBUtil.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sqlGetListOrderDetail);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()){
+                OrderDetail orderDetail = new OrderDetail();
+                orderDetail.setOrder(new Order(rs.getInt("orderNumber")));
+                orderDetail.setProduct(new Product(rs.getString("serial")));
+                orderDetail.setQuantityOrdered(rs.getInt("quantityOrdered"));
+                orderDetail.setPriceEach(rs.getDouble("priceEach"));
+                orderDetailList.add(orderDetail);
+            }
+            return orderDetailList;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                }
+            }
+        }
+    }
+
     public static void main(String[] args) {
         OrderDAO orderDAO = new OrderDAOimpl();
-        PagingObject<Order> pagingObject = new PagingObject<Order>();
-        pagingObject.setCurrentPage(1);
-        pagingObject.setSizeOfPage(5);
-        Customer customer = new Customer(1);
-        pagingObject = orderDAO.getListOrdersDAO(pagingObject, customer);
-
-        for (Order order : pagingObject.getObjects()) {
-            System.out.println(order.getOrderNumber() + ": " + order.getContact().getContactNumber() + ": "
-                    + customer.getId());
+        List<OrderDetail> orderDetailList = orderDAO.getListOrderDetailFromOrder(new Order(1));
+        for (OrderDetail order : orderDetailList) {
+            System.out.println(order.getOrder().getOrderNumber() + ": " + order.getQuantityOrdered() + ": "
+                    + order.getPriceEach());
         }
     }
 }

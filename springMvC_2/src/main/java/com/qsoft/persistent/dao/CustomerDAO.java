@@ -19,4 +19,5 @@ public interface CustomerDAO {
 
     public Contact findContactByCustomer(Customer customer);
     public Customer findCustomerByName(String customerName);
+    public Customer findDetailByCustomerId (int idCustomer);
 }

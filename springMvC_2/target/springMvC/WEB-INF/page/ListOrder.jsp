@@ -9,11 +9,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%@ page isELIgnored="false" %>
     <title>List Order</title>
 </head>
 <body>
 <h1>List Order</h1>
-
 <table width="90%" style="margin-left: 50px;">
     <tr>
         <td style="width:20%">Order Number</td>
@@ -24,7 +24,11 @@
     </tr>
     <c:forEach var="listValue" items="${pagingObject.objects}">
         <tr>
-            <td style="width:20%"><c:out value="${listValue.orderNumber}"/></td>
+            <td style="width:20%">
+                <a href="#" onclick="orderDetail(this)" id ="${listValue.orderNumber}">
+                    <c:out value="${listValue.orderNumber}"/>
+                </a>
+            </td>
             <td style="width:20%"><c:out value="${listValue.contactName}"/></td>
             <td style="width:20%"><c:out value="${listValue.totalAmount}"/></td>
             <td style="width:20%"><c:out value="${listValue.creationDate}"/></td>
@@ -33,10 +37,6 @@
     </c:forEach>
 </table>
 
-<form name="orderList" action="/orderList">
-    <input hidden="customerId" value="${customerId}">
-    <input hidden="currentPage" name="currentPage" id="currentPage" value="${pagingObject.currentPage}">
-</form>
 
 
 <div class="paging" style="margin-left: 200px">
@@ -71,6 +71,11 @@
         &nbsp;&nbsp;&nbsp; <a href="#" onclick="next()">Next</a>
     </c:if>
 </div>
+
+<form name="orderList" action="/orderList">
+    <input hidden="customerId" value="${customerId}" id="customerId">
+    <input hidden="currentPage" name="currentPage" id="currentPage" value="${pagingObject.currentPage}">
+</form>
 </body>
 </html>
 
@@ -80,7 +85,7 @@
         var lnk = object.getAttribute('id');
         var elem = document.getElementById("currentPage");
         elem.value = lnk;
-        document.listCustomer.submit();
+        document.orderList.submit();
     }
 
     function back(){
@@ -88,7 +93,7 @@
         var values = elem.value;
         if(values > 1){
             elem.value = values-1;
-            document.listCustomer.submit();
+            document.orderList.submit();
         }
     }
 
@@ -97,13 +102,21 @@
         var values = elem.value;
         var intResults = parseInt(values, 10);
         elem.value = intResults + 1;
-        document.listCustomer.submit();
+        document.orderList.submit();
+    }
+
+    function orderDetail(object){
+        var orderId = object.getAttribute('id');
+        var customerId = document.getElementById("customerId").value;
+        var url =  "/orderDetail?orderId=" + orderId + "&&customerId="+ customerId;
+        window.top.location.href = url;
+
     }
 </script>
 
 <style>
     .paging{
-        top: 500px;
+        top: 270px;
         left: 300px;
         position: absolute;
     }

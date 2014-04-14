@@ -8,17 +8,19 @@ public class OrderDetail {
     Product product;
     int quantityOrdered;
     double priceEach;
-    String description;
 
     public OrderDetail() {
     }
 
-    public OrderDetail(Order order, Product product, int quantityOrdered, double priceEach, String description) {
+    public OrderDetail(Order order, Product product, int quantityOrdered, double priceEach) {
         this.order = order;
         this.product = product;
         this.quantityOrdered = quantityOrdered;
         this.priceEach = priceEach;
-        this.description = description;
+    }
+
+    public OrderDetail(Order order) {
+        this.order = order;
     }
 
     public Order getOrder() {
@@ -51,13 +53,5 @@ public class OrderDetail {
 
     public void setPriceEach(double priceEach) {
         this.priceEach = priceEach;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 }

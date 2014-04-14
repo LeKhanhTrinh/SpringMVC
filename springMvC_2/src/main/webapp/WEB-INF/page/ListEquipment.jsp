@@ -101,4 +101,9 @@
 </script>
 
 <style>
+    .paging{
+        top: 270px;
+        left: 300px;
+        position: absolute;
+    }
 </style>

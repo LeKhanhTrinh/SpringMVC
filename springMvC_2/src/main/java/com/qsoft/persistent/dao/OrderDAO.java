@@ -17,4 +17,6 @@ public interface OrderDAO {
     String findContactName(Customer customer);
 
     int getTotalAmount(int orderNumber);
+
+    List<OrderDetail> getListOrderDetailFromOrder(Order order);
 }

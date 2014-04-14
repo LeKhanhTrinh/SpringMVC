@@ -14,6 +14,10 @@ public class Product {
         this.year = year;
     }
 
+    public Product(String serialProduct) {
+        this.serialProduct = serialProduct;
+    }
+
     public String getSerialProduct() {
         return serialProduct;
     }
@@ -52,5 +56,9 @@ public class Product {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public String toString(){
+        return getSerialProduct() +", "+ getProductLine().getName()+", "+ getModelProduct()+", "+getYear();
     }
 }

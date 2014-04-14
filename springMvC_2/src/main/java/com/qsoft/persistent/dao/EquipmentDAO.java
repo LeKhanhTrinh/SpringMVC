@@ -7,4 +7,6 @@ import com.qsoft.util.PagingObject;
 
 public interface EquipmentDAO {
     PagingObject<Product> getListEquipmentDAO(PagingObject<Product> pagingObjects, Customer customer);
+
+    public Product findProductByIdProduct(String serialProduct);
 }
