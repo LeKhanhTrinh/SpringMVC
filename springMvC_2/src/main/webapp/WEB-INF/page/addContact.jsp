@@ -36,7 +36,7 @@
         </tr>
         <tr>
             <td></td>
-            <td><input type="checkbox" name="isMain" checked> Main Contact</td>
+            <td><input type="checkbox" name="isMain"  checked> Main Contact</td>
         </tr>
         <tr>
             <td></td>

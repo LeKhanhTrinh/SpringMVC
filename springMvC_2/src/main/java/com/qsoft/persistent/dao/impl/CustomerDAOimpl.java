@@ -27,7 +27,7 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
 
         // get List of Customer
         Connection conn = null;
-        String sql = "Select * from  customers"; // bonus criteria...
+        String sql = "Select * from  customers where customerName like \'%" + criteria + "%\';";
         try {
             conn = DBUtil.getConnection();
             PreparedStatement ps = conn.prepareStatement(sql);
