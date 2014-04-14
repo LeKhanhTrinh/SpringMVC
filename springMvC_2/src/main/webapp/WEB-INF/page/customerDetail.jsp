@@ -2,6 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%@ page isELIgnored="false" %>
     <title></title>
 </head>
 <body>
@@ -48,7 +49,7 @@
     }
 
     function callOrderPage(){
-        document.getElementById("iframeContent").src = "/order";
+        document.getElementById("iframeContent").src = "/order?customer=${customerInfo.customerNumber}";
     }
     function popitup(url) {
         var newurl = url;

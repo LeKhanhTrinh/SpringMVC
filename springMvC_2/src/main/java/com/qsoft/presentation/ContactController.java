@@ -14,6 +14,7 @@ public class ContactController {
     @RequestMapping(value = "/goAddContact", method=RequestMethod.GET)
     public ModelAndView goAddContact( @RequestParam("customer") String customerID) {
         ModelAndView modelAndView = new ModelAndView("addContact");
+        modelAndView.addObject("confirm", 0);
         modelAndView.addObject("customerId", customerID);
         return modelAndView;
     }

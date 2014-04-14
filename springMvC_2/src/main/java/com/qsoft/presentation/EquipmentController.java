@@ -32,6 +32,9 @@ public class EquipmentController {
         for(EquipmentBusinessModel model : equipmentBusinessModelPagingObject.getObjects()){
             System.out.println(model.getSerialProduct());
         }
+
+        System.out.println("CurrentPage" + equipmentBusinessModelPagingObject.getCurrentPage()
+        + "Total Page" + equipmentBusinessModelPagingObject.getTotalPage());
         return modelAndView;
     }
 

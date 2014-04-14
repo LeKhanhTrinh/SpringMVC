@@ -9,6 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%@ page isELIgnored="false" %>
     <title>List equipment</title>
 </head>
 <body>
@@ -22,6 +23,7 @@
         <td style="width:25%">Year</td>
 
     </tr>
+    ${pagingObject.currentPage} / ${pagingObject.totalPage}
     <c:forEach var="listValue" items="${pagingObject.objects}">
         <tr>
             <td style="width:25%"><c:out value="${listValue.serialProduct}"/></td>
@@ -35,7 +37,6 @@
     <input hidden="customerId" value="${customerId}">
     <input hidden="currentPage" name="currentPage" id="currentPage" value="${pagingObject.currentPage}">
 </form>
-
 
 </table>
 <div class="paging" style="margin-left: 200px">
@@ -79,7 +80,7 @@
         var lnk = object.getAttribute('id');
         var elem = document.getElementById("currentPage");
         elem.value = lnk;
-        document.listCustomer.submit();
+        document.equipmentList.submit();
     }
 
     function back(){
@@ -87,7 +88,7 @@
         var values = elem.value;
         if(values > 1){
             elem.value = values-1;
-            document.listCustomer.submit();
+            document.equipmentList.submit();
         }
     }
 
@@ -96,14 +97,9 @@
         var values = elem.value;
         var intResults = parseInt(values, 10);
         elem.value = intResults + 1;
-        document.listCustomer.submit();
+        document.equipmentList.submit();
     }
 </script>
 
 <style>
-    .paging{
-        top: 500px;
-        left: 300px;
-        position: absolute;
-    }
 </style>

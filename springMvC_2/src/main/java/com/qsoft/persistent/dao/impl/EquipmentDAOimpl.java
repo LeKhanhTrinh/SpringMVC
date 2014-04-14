@@ -84,7 +84,6 @@ public class EquipmentDAOimpl implements EquipmentDAO {
         productPagingObject.setSizeOfPage(5);
         Customer customer = new Customer(1);
         productPagingObject = equipmentDAO.getListEquipmentDAO(productPagingObject, customer);
-
         for(Product product : productPagingObject.getObjects()){
             System.out.println(product.getSerialProduct() +":"+product.getProductLine().getName()
                     +": "+ product.getModelProduct() + ":" + product.getYear());

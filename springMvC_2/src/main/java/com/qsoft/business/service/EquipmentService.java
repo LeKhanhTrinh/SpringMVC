@@ -21,11 +21,13 @@ public class EquipmentService {
         productPagingObject.setCurrentPage(pagingObject.getCurrentPage());
         productPagingObject.setSizeOfPage(pagingObject.getSizeOfPage());
         EquipmentDAO equipmentDAO = new EquipmentDAOimpl();
-        List<Product> productList = equipmentDAO.getListEquipmentDAO(productPagingObject, customer).getObjects();
+        productPagingObject = equipmentDAO.getListEquipmentDAO(productPagingObject, customer);
 
+        List<Product> productList = productPagingObject.getObjects();
         PagingObject<EquipmentBusinessModel> equipmentBusinessModelPagingObject = new PagingObject<EquipmentBusinessModel>();
-        equipmentBusinessModelPagingObject.setCurrentPage(pagingObject.getCurrentPage());
-        equipmentBusinessModelPagingObject.setSizeOfPage(pagingObject.getSizeOfPage());
+        equipmentBusinessModelPagingObject.setCurrentPage(productPagingObject.getCurrentPage());
+        equipmentBusinessModelPagingObject.setTotalPage(productPagingObject.getTotalPage());
+        equipmentBusinessModelPagingObject.setSizeOfPage(productPagingObject.getSizeOfPage());
         equipmentBusinessModelPagingObject.setObjects(getListEquipmentBusinessModelFromListProduct(productList));
 
         return equipmentBusinessModelPagingObject;
@@ -49,7 +51,7 @@ public class EquipmentService {
         equipmentBusinessModelPagingObject.setSizeOfPage(5);
         Customer customer = new Customer(1);
         equipmentBusinessModelPagingObject = equipmentService.getListEquipmentBusinessModel(equipmentBusinessModelPagingObject, customer);
-
+        System.out.println(equipmentBusinessModelPagingObject.getTotalPage());
         for(EquipmentBusinessModel product : equipmentBusinessModelPagingObject.getObjects()){
             System.out.println(product.getSerialProduct() +":"+product.getProductLine().getName()
                     +": "+ product.getModelProduct() + ":" + product.getYear());

@@ -15,7 +15,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class OrderController {
     @RequestMapping(value = "/order", method= RequestMethod.GET)
-
     public ModelAndView goOrderFirst( @RequestParam("customer") String customerID) {
         ModelAndView modelAndView = new ModelAndView("ListOrder");
 
