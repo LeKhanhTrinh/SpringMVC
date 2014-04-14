@@ -33,8 +33,8 @@ public class OrderDAOimpl implements OrderDAO {
                     "inner join orderdetails on orders.orderNumber = orderdetails.orderNumber\n" +
                     "inner join contacts on orders.contactNumber = contacts.contactNumber\n" +
                     "inner join customers on customers.customerNumber = contacts.customerNumber\n" +
-                    "where customers.customerNumber = 1\n" +
-                    "group by orders.orderNumber;";
+                    "where customers.customerNumber = '" + customer.getId()+
+                    "' group by orders.orderNumber;";
             try {
                 conn = DBUtil.getConnection();
                 PreparedStatement ps = conn.prepareStatement(sql);

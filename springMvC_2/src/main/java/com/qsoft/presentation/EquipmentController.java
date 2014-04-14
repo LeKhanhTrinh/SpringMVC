@@ -37,7 +37,7 @@ public class EquipmentController {
     }
 
     @RequestMapping(value = "/equipmentList", method= RequestMethod.POST)
-    public ModelAndView goEquipmentMore( @RequestParam("customer") String customerID,
+    public ModelAndView goEquipmentMore( @RequestParam("customerId") String customerID,
                                          @RequestParam ("currentPage") String currentPage) {
 
         ModelAndView modelAndView = new ModelAndView("ListEquipment");

@@ -32,8 +32,8 @@
         </tr>
     </c:forEach>
 </table>
-<form name="equipmentList" action="/equipmentList">
-    <input hidden="customerId" value="${customerId}">
+<form name="equipmentList" action="/equipmentList" method="post">
+    <input hidden="customerId" name ="customerId" value="${customerId}">
     <input hidden="currentPage" name="currentPage" id="currentPage" value="${pagingObject.currentPage}">
 </form>
 

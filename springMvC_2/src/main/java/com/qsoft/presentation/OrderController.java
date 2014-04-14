@@ -28,7 +28,7 @@ public class OrderController {
         orderListBusinessModelPagingObject = orderService.getListOrderBusinessModel(
                 orderListBusinessModelPagingObject, customer);
 
-        modelAndView.addObject("customerId", customerID);
+        modelAndView.addObject("customerId", idCustomer);
         modelAndView.addObject("pagingObject", orderListBusinessModelPagingObject);
 
         for(OrderListBusinessModel model : orderListBusinessModelPagingObject.getObjects()){
@@ -38,7 +38,7 @@ public class OrderController {
     }
 
     @RequestMapping(value = "/orderList", method= RequestMethod.POST)
-    public ModelAndView goOrderMore( @RequestParam("customer") String customerID,
+    public ModelAndView goOrderMore( @RequestParam("customerId") String customerID,
                                          @RequestParam ("currentPage") String currentPage) {
 
         ModelAndView modelAndView = new ModelAndView("ListOrder");

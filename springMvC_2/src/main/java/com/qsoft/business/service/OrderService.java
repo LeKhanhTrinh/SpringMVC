@@ -45,7 +45,6 @@ public class OrderService {
     List<OrderListBusinessModel> getListOrderListBusinessModelFromOrderList(List<Order> orderList, Customer customer){
 
         List<OrderListBusinessModel> orderListBusinessModelList = new ArrayList<OrderListBusinessModel>();
-
         for (Order order : orderList){
             OrderListBusinessModel orderListBusinessModel = new OrderListBusinessModel();
             CustomerDAO customerDAO = new CustomerDAOimpl();
@@ -68,7 +67,7 @@ public class OrderService {
         PagingObject<OrderListBusinessModel> orderListBusinessModelPagingObject = new PagingObject<OrderListBusinessModel>();
         orderListBusinessModelPagingObject.setCurrentPage(1);
         orderListBusinessModelPagingObject.setSizeOfPage(5);
-        Customer customer = new Customer(1);
+        Customer customer = new Customer(3);
         orderListBusinessModelPagingObject = orderService.getListOrderBusinessModel(orderListBusinessModelPagingObject, customer);
 
         for(OrderListBusinessModel orderListBusinessModel : orderListBusinessModelPagingObject.getObjects()){

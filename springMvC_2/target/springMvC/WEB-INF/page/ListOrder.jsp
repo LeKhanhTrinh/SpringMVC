@@ -38,7 +38,6 @@
 </table>
 
 
-
 <div class="paging" style="margin-left: 200px">
     <c:if test="${pagingObject.currentPage != 1}">
         <a href="#" onclick="back();">Prev</a> &nbsp; &nbsp; &nbsp;
@@ -72,8 +71,8 @@
     </c:if>
 </div>
 
-<form name="orderList" action="/orderList">
-    <input hidden="customerId" value="${customerId}" id="customerId">
+<form name="orderList" action="/orderList" method="post">
+    <input hidden="customerId" name="customerId" value="${customerId}" id="customerId">
     <input hidden="currentPage" name="currentPage" id="currentPage" value="${pagingObject.currentPage}">
 </form>
 </body>
