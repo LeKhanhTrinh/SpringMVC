@@ -36,11 +36,12 @@
             </tr>
             <tr>
                 <td></td>
-                <td><input type="checkbox" name="isMain" checked> Main Contact</td>
+                <td><input type="checkbox" id="checkbox" name="isMain" checked> Main Contact</td>
+                <input type="hidden" id="hidCheck" name="isMain">
             </tr>
             <tr>
                 <td></td>
-                <td><input type="submit" value="Save">
+                <td><input type="submit" value="Save" onclick="getValueOfCheckBox()">
                     <button onclick="closewindow()">Cancel</button>
                 </td>
             </tr>
@@ -58,7 +59,21 @@
 </html>
 
 <script>
+    function getValueOfCheckBox() {
+        var checkedValue = false;
+        var message = "isMain:\n\n"
+        var inputElements = document.getElementById("checkbox");
 
+        if (inputElements.checked == true){
+            checkedValue = true;
+        }
+
+        if (checkedValue == false){
+            document.getElementById("hidCheck").value = false;
+        }
+        message = message + checkedValue;
+        alert(message);
+    }
     function closewindow() {
         window.close();
     }
