@@ -3,18 +3,15 @@
 <html>
 <head>
     <script>
-        function validateFormLogin()
-        {
+        function validateFormLogin() {
             var usename = document.forms["loginForm"]["username"].value;
             var password = document.forms["loginForm"]["password"].value;
-            if (usename == null || usename == "")
-            {
+            if (usename == null || usename == "") {
                 alert("Username must be filled out");
                 return false;
             }
 
-            if (password == null || password == "")
-            {
+            if (password == null || password == "") {
                 alert("Password must be filled out");
                 return false;
             }
@@ -23,6 +20,7 @@
 </head>
 <body style="text-align: -webkit-center">
 <h2>Login</h2>
+
 <form action="login" name="loginForm" onsubmit="return validateFormLogin()" method="POST">
     <table>
         <tr>

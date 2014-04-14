@@ -1,8 +1,6 @@
 package com.qsoft.presentation;
 
-import com.qsoft.business.model.EquipmentBusinessModel;
 import com.qsoft.business.model.OrderListBusinessModel;
-import com.qsoft.business.service.EquipmentService;
 import com.qsoft.business.service.OrderService;
 import com.qsoft.persistent.entity.Customer;
 import com.qsoft.util.PagingObject;
@@ -14,8 +12,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class OrderController {
-    @RequestMapping(value = "/order", method= RequestMethod.GET)
-    public ModelAndView goOrderFirst( @RequestParam("customer") String customerID) {
+    @RequestMapping(value = "/order", method = RequestMethod.GET)
+    public ModelAndView goOrderFirst(@RequestParam("customer") String customerID) {
         ModelAndView modelAndView = new ModelAndView("ListOrder");
 
         PagingObject<OrderListBusinessModel> orderListBusinessModelPagingObject = new PagingObject<OrderListBusinessModel>();
@@ -31,15 +29,15 @@ public class OrderController {
         modelAndView.addObject("customerId", idCustomer);
         modelAndView.addObject("pagingObject", orderListBusinessModelPagingObject);
 
-        for(OrderListBusinessModel model : orderListBusinessModelPagingObject.getObjects()){
+        for (OrderListBusinessModel model : orderListBusinessModelPagingObject.getObjects()) {
             System.out.println(model.getContactName());
         }
         return modelAndView;
     }
 
-    @RequestMapping(value = "/orderList", method= RequestMethod.POST)
-    public ModelAndView goOrderMore( @RequestParam("customerId") String customerID,
-                                         @RequestParam ("currentPage") String currentPage) {
+    @RequestMapping(value = "/orderList", method = RequestMethod.POST)
+    public ModelAndView goOrderMore(@RequestParam("customerId") String customerID,
+                                    @RequestParam("currentPage") String currentPage) {
 
         ModelAndView modelAndView = new ModelAndView("ListOrder");
 

@@ -25,7 +25,7 @@
     <c:forEach var="listValue" items="${pagingObject.objects}">
         <tr>
             <td style="width:20%">
-                <a href="#" onclick="orderDetail(this)" id ="${listValue.orderNumber}">
+                <a href="#" onclick="orderDetail(this)" id="${listValue.orderNumber}">
                     <c:out value="${listValue.orderNumber}"/>
                 </a>
             </td>
@@ -46,7 +46,7 @@
     <c:if test="${pagingObject.totalPage < 10}">
         <c:forEach begin="1" end="${pagingObject.totalPage}" var="i">
             <c:if test="${i!=pagingObject.currentPage}">
-                &nbsp; &nbsp;  <a href="#" id="${i}" onclick="gotoPage(this)"><c:out value="${i}"/></a> &nbsp; &nbsp;
+                &nbsp; &nbsp; <a href="#" id="${i}" onclick="gotoPage(this)"><c:out value="${i}"/></a> &nbsp; &nbsp;
             </c:if>
             <c:if test="${i==pagingObject.currentPage}">
                 <b><c:out value="${i}"/></b>
@@ -58,7 +58,7 @@
         <c:if test="${pagingObject.currentPage > 5}">
             <c:forEach begin="${pagingObject.currentPage-4}" end="${pagingObject.currentPage+5}" var="i">
                 <c:if test="${i!=pagingObject.currentPage}">
-                    &nbsp; &nbsp;   <a href="#" id="${i}" onclick="gotoPage(this)"><c:out value="${i}"/></a>&nbsp; &nbsp;
+                    &nbsp; &nbsp; <a href="#" id="${i}" onclick="gotoPage(this)"><c:out value="${i}"/></a>&nbsp; &nbsp;
                 </c:if>
                 <c:if test="${i==pagingObject.currentPage}">
                     <b><c:out value="currentPage"/></b>
@@ -80,23 +80,23 @@
 
 
 <script>
-    function gotoPage(object){
+    function gotoPage(object) {
         var lnk = object.getAttribute('id');
         var elem = document.getElementById("currentPage");
         elem.value = lnk;
         document.orderList.submit();
     }
 
-    function back(){
+    function back() {
         var elem = document.getElementById("currentPage");
         var values = elem.value;
-        if(values > 1){
-            elem.value = values-1;
+        if (values > 1) {
+            elem.value = values - 1;
             document.orderList.submit();
         }
     }
 
-    function next(){
+    function next() {
         var elem = document.getElementById("currentPage");
         var values = elem.value;
         var intResults = parseInt(values, 10);
@@ -104,17 +104,17 @@
         document.orderList.submit();
     }
 
-    function orderDetail(object){
+    function orderDetail(object) {
         var orderId = object.getAttribute('id');
         var customerId = document.getElementById("customerId").value;
-        var url =  "/orderDetail?orderId=" + orderId + "&&customerId="+ customerId;
+        var url = "/orderDetail?orderId=" + orderId + "&&customerId=" + customerId;
         window.top.location.href = url;
 
     }
 </script>
 
 <style>
-    .paging{
+    .paging {
         top: 270px;
         left: 300px;
         position: absolute;

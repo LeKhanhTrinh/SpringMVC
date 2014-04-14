@@ -3,7 +3,6 @@ package com.qsoft.presentation;
 import com.qsoft.business.model.CustomerBusinessModel;
 import com.qsoft.business.model.CustomerBusinessModelDetail;
 import com.qsoft.business.service.CustomerService;
-import com.qsoft.persistent.entity.Customer;
 import com.qsoft.util.PagingObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

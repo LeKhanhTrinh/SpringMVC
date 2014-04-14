@@ -12,8 +12,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class EquipmentController {
-    @RequestMapping(value = "/equipment", method= RequestMethod.GET)
-    public ModelAndView goEquipmentFirst( @RequestParam("customer") String customerID) {
+    @RequestMapping(value = "/equipment", method = RequestMethod.GET)
+    public ModelAndView goEquipmentFirst(@RequestParam("customer") String customerID) {
         ModelAndView modelAndView = new ModelAndView("ListEquipment");
 
         PagingObject<EquipmentBusinessModel> equipmentBusinessModelPagingObject = new PagingObject<EquipmentBusinessModel>();
@@ -29,16 +29,16 @@ public class EquipmentController {
         modelAndView.addObject("customerId", customerID);
         modelAndView.addObject("pagingObject", equipmentBusinessModelPagingObject);
 
-        for(EquipmentBusinessModel model : equipmentBusinessModelPagingObject.getObjects()){
+        for (EquipmentBusinessModel model : equipmentBusinessModelPagingObject.getObjects()) {
             System.out.println(model.getSerialProduct());
         }
 
         return modelAndView;
     }
 
-    @RequestMapping(value = "/equipmentList", method= RequestMethod.POST)
-    public ModelAndView goEquipmentMore( @RequestParam("customerId") String customerID,
-                                         @RequestParam ("currentPage") String currentPage) {
+    @RequestMapping(value = "/equipmentList", method = RequestMethod.POST)
+    public ModelAndView goEquipmentMore(@RequestParam("customerId") String customerID,
+                                        @RequestParam("currentPage") String currentPage) {
 
         ModelAndView modelAndView = new ModelAndView("ListEquipment");
 

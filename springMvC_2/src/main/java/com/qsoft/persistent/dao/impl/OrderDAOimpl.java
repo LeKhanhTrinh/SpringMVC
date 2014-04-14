@@ -27,51 +27,51 @@ public class OrderDAOimpl implements OrderDAO {
         // getList Order
         int totalRow = 0;
         List<Order> orderList = new ArrayList<Order>();
-            Connection conn = null;
-            String sql = "select customers.customerNumber, orders.orderNumber, contacts.contactNumber, orders.creationDate, orders.updateDate\n" +
-                    "from orders\n" +
-                    "inner join orderdetails on orders.orderNumber = orderdetails.orderNumber\n" +
-                    "inner join contacts on orders.contactNumber = contacts.contactNumber\n" +
-                    "inner join customers on customers.customerNumber = contacts.customerNumber\n" +
-                    "where customers.customerNumber = '" + customer.getId()+
-                    "' group by orders.orderNumber;";
-            try {
-                conn = DBUtil.getConnection();
-                PreparedStatement ps = conn.prepareStatement(sql);
-                ResultSet rs = ps.executeQuery();
-                while (rs.next()) {
-                    totalRow++;
-                    if ((totalRow >= pagingObject.getCurrentPage() * pagingObject.getSizeOfPage() - (pagingObject.getSizeOfPage() - 1))
-                            && totalRow <= ( pagingObject.getCurrentPage() * pagingObject.getSizeOfPage()))
+        Connection conn = null;
+        String sql = "select customers.customerNumber, orders.orderNumber, contacts.contactNumber, orders.creationDate, orders.updateDate\n" +
+                "from orders\n" +
+                "inner join orderdetails on orders.orderNumber = orderdetails.orderNumber\n" +
+                "inner join contacts on orders.contactNumber = contacts.contactNumber\n" +
+                "inner join customers on customers.customerNumber = contacts.customerNumber\n" +
+                "where customers.customerNumber = '" + customer.getId() +
+                "' group by orders.orderNumber;";
+        try {
+            conn = DBUtil.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                totalRow++;
+                if ((totalRow >= pagingObject.getCurrentPage() * pagingObject.getSizeOfPage() - (pagingObject.getSizeOfPage() - 1))
+                        && totalRow <= (pagingObject.getCurrentPage() * pagingObject.getSizeOfPage()))
                     orderList.add(new Order(
-                                rs.getInt("orderNumber"), new Contact(rs.getInt("contactNumber")),
-                                customer, rs.getDate("creationDate"), rs.getDate("updateDate")));
-                }
-                rs.close();
-                ps.close();
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
+                            rs.getInt("orderNumber"), new Contact(rs.getInt("contactNumber")),
+                            customer, rs.getDate("creationDate"), rs.getDate("updateDate")));
+            }
+            rs.close();
+            ps.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
 
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            } finally {
-                if (conn != null) {
-                    try {
-                        conn.close();
-                    } catch (SQLException e) {
-                    }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
                 }
             }
-            int totalPage = totalRow / pagingObject.getSizeOfPage();
-            long remainder = totalRow % pagingObject.getSizeOfPage();
-            if (remainder != 0L) {
-                totalPage++;
-            }
-            if (totalPage == 0)
-                orderPagingObject.setObjects(null);
-            else
-                orderPagingObject.setObjects(orderList);
-            orderPagingObject.setTotalPage(totalPage);
+        }
+        int totalPage = totalRow / pagingObject.getSizeOfPage();
+        long remainder = totalRow % pagingObject.getSizeOfPage();
+        if (remainder != 0L) {
+            totalPage++;
+        }
+        if (totalPage == 0)
+            orderPagingObject.setObjects(null);
+        else
+            orderPagingObject.setObjects(orderList);
+        orderPagingObject.setTotalPage(totalPage);
 
         return orderPagingObject;
     }
@@ -85,15 +85,15 @@ public class OrderDAOimpl implements OrderDAO {
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                contactList.add( new Contact(customer,
+                contactList.add(new Contact(customer,
                         rs.getString("contactName"),
                         rs.getString("phone"), rs.getString("email"),
                         rs.getString("jobTitle"), rs.getBoolean("isMain")
-                        ));
+                ));
             }
             rs.close();
             ps.close();
-            return  contactList;
+            return contactList;
         } catch (SQLException e) {
             throw new RuntimeException(e);
 
@@ -120,7 +120,7 @@ public class OrderDAOimpl implements OrderDAO {
             ResultSet rs = ps.executeQuery();
 
             String contactName = "";
-            if(rs.next()){
+            if (rs.next()) {
                 contactName = rs.getString(3);
             }
             return contactName;
@@ -128,7 +128,7 @@ public class OrderDAOimpl implements OrderDAO {
             throw new RuntimeException(e);
         } catch (Exception e) {
             throw new RuntimeException(e);
-        }finally {
+        } finally {
             if (conn != null) {
                 try {
                     conn.close();
@@ -139,14 +139,14 @@ public class OrderDAOimpl implements OrderDAO {
     }
 
     @Override
-    public int getTotalAmount(int orderNumber){
+    public int getTotalAmount(int orderNumber) {
 
         Connection conn = null;
         String sql = "select orders.orderNumber, SUM(orderdetails.priceEach*orderdetails.quantityOrdered) as Total_Amount"
-        + " from orders"
-        + " inner join orderdetails on orders.orderNumber = orderdetails.orderNumber"
-        + " where orders.orderNumber = " + orderNumber
-        + " group by orders.orderNumber;";
+                + " from orders"
+                + " inner join orderdetails on orders.orderNumber = orderdetails.orderNumber"
+                + " where orders.orderNumber = " + orderNumber
+                + " group by orders.orderNumber;";
 
         try {
             conn = DBUtil.getConnection();
@@ -154,7 +154,7 @@ public class OrderDAOimpl implements OrderDAO {
             ResultSet rs = ps.executeQuery();
 
             int totalAmount = 0;
-            if(rs.next()){
+            if (rs.next()) {
                 totalAmount = rs.getInt(2);
             }
             return totalAmount;
@@ -162,7 +162,7 @@ public class OrderDAOimpl implements OrderDAO {
             throw new RuntimeException(e);
         } catch (Exception e) {
             throw new RuntimeException(e);
-        }finally {
+        } finally {
             if (conn != null) {
                 try {
                     conn.close();
@@ -176,14 +176,14 @@ public class OrderDAOimpl implements OrderDAO {
     public List<OrderDetail> getListOrderDetailFromOrder(Order order) {
         int orderId = order.getOrderNumber();
         Connection conn = null;
-        String sqlGetListOrderDetail = "Select * from orderdetails where ordernumber = '" +orderId+"'";
+        String sqlGetListOrderDetail = "Select * from orderdetails where ordernumber = '" + orderId + "'";
 
         List<OrderDetail> orderDetailList = new ArrayList<OrderDetail>();
         try {
             conn = DBUtil.getConnection();
             PreparedStatement ps = conn.prepareStatement(sqlGetListOrderDetail);
             ResultSet rs = ps.executeQuery();
-            while (rs.next()){
+            while (rs.next()) {
                 OrderDetail orderDetail = new OrderDetail();
                 orderDetail.setOrder(new Order(rs.getInt("orderNumber")));
                 orderDetail.setProduct(new Product(rs.getString("serial")));
@@ -196,22 +196,13 @@ public class OrderDAOimpl implements OrderDAO {
             throw new RuntimeException(e);
         } catch (Exception e) {
             throw new RuntimeException(e);
-        }finally {
+        } finally {
             if (conn != null) {
                 try {
                     conn.close();
                 } catch (SQLException e) {
                 }
             }
-        }
-    }
-
-    public static void main(String[] args) {
-        OrderDAO orderDAO = new OrderDAOimpl();
-        List<OrderDetail> orderDetailList = orderDAO.getListOrderDetailFromOrder(new Order(1));
-        for (OrderDetail order : orderDetailList) {
-            System.out.println(order.getOrder().getOrderNumber() + ": " + order.getQuantityOrdered() + ": "
-                    + order.getPriceEach());
         }
     }
 }

@@ -13,11 +13,11 @@ public class DBUtil {
 
     // SQL strings to create table and insert sample data
 
-    public static Connection getConnection() throws Exception{
+    public static Connection getConnection() throws Exception {
         Class.forName(CLASS_NAME);
-        try{
+        try {
             return DriverManager.getConnection(URL, USER_NAME, PASSWORD);
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;

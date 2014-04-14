@@ -12,7 +12,7 @@ public class Contact {
     public Contact() {
     }
 
-    public Contact(Customer customer, String contactName,  String phone, String email, String jobTitle, boolean isMain) {
+    public Contact(Customer customer, String contactName, String phone, String email, String jobTitle, boolean isMain) {
         this.customer = customer;
         this.contactName = contactName;
         this.phone = phone;
@@ -21,7 +21,7 @@ public class Contact {
         this.isMain = isMain;
     }
 
-    public Contact(int contactNumber,String contactName, String phone, String email, String jobTitle, boolean isMain) {
+    public Contact(int contactNumber, String contactName, String phone, String email, String jobTitle, boolean isMain) {
         this.contactNumber = contactNumber;
         this.contactName = contactName;
         this.phone = phone;

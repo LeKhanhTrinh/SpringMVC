@@ -6,8 +6,6 @@ import com.qsoft.business.service.CustomerService;
 import com.qsoft.business.service.OrderDetailService;
 import com.qsoft.persistent.entity.Customer;
 import com.qsoft.persistent.entity.Order;
-import com.qsoft.persistent.entity.OrderDetail;
-import org.omg.CORBA.Request;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,9 +19,9 @@ import java.util.List;
  */
 @Controller
 public class OrderDetailController {
-    @RequestMapping(value = "/orderDetail", method= RequestMethod.GET)
-    public ModelAndView goOrderDetail( @RequestParam("customerId") String customerID,
-                                       @RequestParam("orderId") String orderId) {
+    @RequestMapping(value = "/orderDetail", method = RequestMethod.GET)
+    public ModelAndView goOrderDetail(@RequestParam("customerId") String customerID,
+                                      @RequestParam("orderId") String orderId) {
         ModelAndView modelAndView = new ModelAndView("orderDetail");
         modelAndView.addObject("orderID", orderId);
 
@@ -42,7 +40,7 @@ public class OrderDetailController {
         double totalOrder = orderDetailService.getTotalOrderDetails(orderDetailList);
         modelAndView.addObject("totalOrder", totalOrder);
 
-        System.out.println(customerID +": "+orderId);
+        System.out.println(customerID + ": " + orderId);
 
         return modelAndView;
     }

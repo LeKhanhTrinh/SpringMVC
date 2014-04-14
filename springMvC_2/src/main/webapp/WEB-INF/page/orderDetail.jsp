@@ -21,9 +21,9 @@
 
     <tr>
         <td rowspan="5" style="width:20%">
-            <img src = "${customerInfo.avt}" width="100px" height="100px"/>
+            <img src="${customerInfo.avt}" width="100px" height="100px"/>
         </td>
-        <td style="width:35%" clospan="3" >${customerInfo.customerName}</td>
+        <td style="width:35%" clospan="3">${customerInfo.customerName}</td>
 
     </tr>
     <tr>
@@ -56,10 +56,10 @@
     </tr>
     <c:forEach var="value" items="${orderDetailList}">
         <tr>
-        <td style="width:25%">${value.product.serialProduct}</td>
-        <td style="width:25%">${value.description}</td>
-        <td style="width:25%">${value.quantityOrdered}</td>
-        <td style="width:25%">$${value.priceEach}</td>
+            <td style="width:25%">${value.product.serialProduct}</td>
+            <td style="width:25%">${value.description}</td>
+            <td style="width:25%">${value.quantityOrdered}</td>
+            <td style="width:25%">$${value.priceEach}</td>
         </tr>
     </c:forEach>
     <tr>

@@ -18,7 +18,7 @@ import java.util.List;
 public class OrderService {
 
     public PagingObject<OrderListBusinessModel> getListOrderBusinessModel(
-            PagingObject<OrderListBusinessModel> pagingObject, Customer customer){
+            PagingObject<OrderListBusinessModel> pagingObject, Customer customer) {
 
         PagingObject<Order> orderPagingObject = new PagingObject<Order>();
         orderPagingObject.setCurrentPage(pagingObject.getCurrentPage());
@@ -36,16 +36,16 @@ public class OrderService {
         orderListBusinessModelPagingObject.setCurrentPage(orderPagingObject.getCurrentPage());
         orderListBusinessModelPagingObject.setSizeOfPage(orderPagingObject.getSizeOfPage());
         orderListBusinessModelPagingObject.setTotalPage(orderPagingObject.getTotalPage());
-        orderListBusinessModelPagingObject.setObjects(getListOrderListBusinessModelFromOrderList(orderList,customer));
+        orderListBusinessModelPagingObject.setObjects(getListOrderListBusinessModelFromOrderList(orderList, customer));
 
         return orderListBusinessModelPagingObject;
 
     }
 
-    List<OrderListBusinessModel> getListOrderListBusinessModelFromOrderList(List<Order> orderList, Customer customer){
+    List<OrderListBusinessModel> getListOrderListBusinessModelFromOrderList(List<Order> orderList, Customer customer) {
 
         List<OrderListBusinessModel> orderListBusinessModelList = new ArrayList<OrderListBusinessModel>();
-        for (Order order : orderList){
+        for (Order order : orderList) {
             OrderListBusinessModel orderListBusinessModel = new OrderListBusinessModel();
             CustomerDAO customerDAO = new CustomerDAOimpl();
             OrderDAO orderDAO = new OrderDAOimpl();
@@ -62,17 +62,4 @@ public class OrderService {
         return orderListBusinessModelList;
     }
 
-    public static void main(String[] args) {
-        OrderService orderService = new OrderService();
-        PagingObject<OrderListBusinessModel> orderListBusinessModelPagingObject = new PagingObject<OrderListBusinessModel>();
-        orderListBusinessModelPagingObject.setCurrentPage(1);
-        orderListBusinessModelPagingObject.setSizeOfPage(5);
-        Customer customer = new Customer(3);
-        orderListBusinessModelPagingObject = orderService.getListOrderBusinessModel(orderListBusinessModelPagingObject, customer);
-
-        for(OrderListBusinessModel orderListBusinessModel : orderListBusinessModelPagingObject.getObjects()){
-            System.out.println(orderListBusinessModel.getOrderNumber() +":"+orderListBusinessModel.getContactName()
-                    +": "+ orderListBusinessModel.getTotalAmount() + ":" + orderListBusinessModel.getCreationDate());
-        }
-    }
 }

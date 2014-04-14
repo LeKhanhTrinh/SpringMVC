@@ -9,7 +9,7 @@ import com.qsoft.persistent.entity.Contact;
  * Created by hunglv on 4/12/14.
  */
 public class ContactService {
-    public boolean inserContact(ContactBusinessModel contactBusinessModel){
+    public boolean inserContact(ContactBusinessModel contactBusinessModel) {
         ContactDAO contactDAO = new ContactDAOimpl();
         Contact contact = new Contact(
                 contactBusinessModel.getCustomer(), contactBusinessModel.getContactName(),

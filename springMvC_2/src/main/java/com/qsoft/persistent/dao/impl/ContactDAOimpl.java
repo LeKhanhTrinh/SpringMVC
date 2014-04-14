@@ -2,18 +2,16 @@ package com.qsoft.persistent.dao.impl;
 
 import com.qsoft.persistent.dao.ContactDAO;
 import com.qsoft.persistent.entity.Contact;
-import com.qsoft.persistent.entity.Customer;
 import com.qsoft.util.DBUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 /**
  * Created by hunglv on 4/12/14.
  */
 public class ContactDAOimpl implements ContactDAO {
-    public boolean insertContact(Contact contact){
+    public boolean insertContact(Contact contact) {
         Connection conn = null;
         try {
             conn = DBUtil.getConnection();

@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by hunglv on 4/10/14.
  */
-public class PagingObject<T>{
+public class PagingObject<T> {
     int currentPage;
     long totalPage;
     int sizeOfPage;

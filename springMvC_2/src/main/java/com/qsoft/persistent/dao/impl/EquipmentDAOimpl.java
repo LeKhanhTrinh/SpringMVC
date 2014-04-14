@@ -33,7 +33,7 @@ public class EquipmentDAOimpl implements EquipmentDAO {
                 "inner join orders on orders.orderNumber = orderdetails.orderNumber\n" +
                 "inner join contacts on orders.contactNumber = contacts.contactNumber\n" +
                 "inner join customers on customers.customerNumber = contacts.customerNumber\n" +
-                "where customers.customerNumber = '" + customer.getId()+"'";
+                "where customers.customerNumber = '" + customer.getId() + "'";
         try {
             conn = DBUtil.getConnection();
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -43,7 +43,7 @@ public class EquipmentDAOimpl implements EquipmentDAO {
             while (rs.next()) {
                 totalRow++;
                 if ((totalRow >= pagingObjects.getCurrentPage() * pagingObjects.getSizeOfPage() - (pagingObjects.getSizeOfPage() - 1))
-                        && totalRow <= ( pagingObjects.getCurrentPage() * pagingObjects.getSizeOfPage()))
+                        && totalRow <= (pagingObjects.getCurrentPage() * pagingObjects.getSizeOfPage()))
                     productList.add(new Product(rs.getString("serial"), new ProductLine(rs.getString("name")),
                             rs.getString("model"), rs.getInt("years")));
             }
@@ -78,7 +78,7 @@ public class EquipmentDAOimpl implements EquipmentDAO {
     }
 
     @Override
-    public Product findProductByIdProduct(String serialProduct){
+    public Product findProductByIdProduct(String serialProduct) {
         Customer tempCustomer = new Customer();
 
         Connection conn = null;
@@ -91,7 +91,7 @@ public class EquipmentDAOimpl implements EquipmentDAO {
             ResultSet rs = ps.executeQuery();
 
 
-            if(rs.next()){
+            if (rs.next()) {
                 Product product = new Product(serialProduct, new ProductLine(rs.getString("idProductLine")),
                         rs.getString("model"), rs.getInt("years"));
                 return product;
@@ -109,17 +109,5 @@ public class EquipmentDAOimpl implements EquipmentDAO {
             }
         }
         return null;
-    }
-    public static void main(String[] args) {
-        EquipmentDAO equipmentDAO = new EquipmentDAOimpl();
-        PagingObject<Product> productPagingObject = new PagingObject<Product>();
-        productPagingObject.setCurrentPage(1);
-        productPagingObject.setSizeOfPage(5);
-        Customer customer = new Customer(1);
-        productPagingObject = equipmentDAO.getListEquipmentDAO(productPagingObject, customer);
-        for(Product product : productPagingObject.getObjects()){
-            System.out.println(product.getSerialProduct() +":"+product.getProductLine().getName()
-                    +": "+ product.getModelProduct() + ":" + product.getYear());
-        }
     }
 }

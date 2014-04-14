@@ -37,7 +37,7 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
             while (rs.next()) {
                 totalRow++;
                 if ((totalRow >= pagingObject.getCurrentPage() * pagingObject.getSizeOfPage() - (pagingObject.getSizeOfPage() - 1))
-                        && totalRow <= ( pagingObject.getCurrentPage() * pagingObject.getSizeOfPage()))
+                        && totalRow <= (pagingObject.getCurrentPage() * pagingObject.getSizeOfPage()))
                     customerList.add(new Customer(
                             rs.getInt("customerNumber"), rs.getString("customerName"),
                             rs.getString("avataLink"), rs.getString("phone"),
@@ -84,7 +84,7 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
             ResultSet rs = ps.executeQuery();
 
             String contactName = "";
-            if(rs.next()){
+            if (rs.next()) {
                 contactName = rs.getString(3);
             }
             return contactName;
@@ -92,7 +92,7 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
             throw new RuntimeException(e);
         } catch (Exception e) {
             throw new RuntimeException(e);
-        }finally {
+        } finally {
             if (conn != null) {
                 try {
                     conn.close();
@@ -121,7 +121,7 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
             ResultSet rs = ps.executeQuery();
 
             int totalEquipment = 0;
-            if(rs.next()){
+            if (rs.next()) {
                 totalEquipment = rs.getInt(2);
             }
             return totalEquipment;
@@ -157,7 +157,7 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
             ResultSet rs = ps.executeQuery();
 
             String contactName = "";
-            if(rs.next()){
+            if (rs.next()) {
                 contactName = rs.getString(3);
             }
             return contactName;
@@ -176,7 +176,7 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
     }
 
     @Override
-    public Customer findCustomerByName(String customerName){
+    public Customer findCustomerByName(String customerName) {
         Customer tempCustomer = new Customer();
 
         Connection conn = null;
@@ -189,7 +189,7 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
             ResultSet rs = ps.executeQuery();
 
 
-            if(rs.next()){
+            if (rs.next()) {
                 tempCustomer = new Customer(
                         rs.getInt("customerNumber"), rs.getString("customerName"),
                         rs.getString("avataLink"), rs.getString("phone"),
@@ -213,7 +213,7 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
     }
 
     @Override
-    public Customer findDetailByCustomerId (int idCustomer){
+    public Customer findDetailByCustomerId(int idCustomer) {
 
         Customer tempCustomer = new Customer();
         Connection conn = null;
@@ -225,7 +225,7 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 
-            if(rs.next()){
+            if (rs.next()) {
                 tempCustomer = new Customer(
                         rs.getInt("customerNumber"), rs.getString("customerName"),
                         rs.getString("avataLink"), rs.getString("phone"),
@@ -247,8 +247,9 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
             }
         }
     }
+
     @Override
-    public Contact findContactByCustomer(Customer customer){
+    public Contact findContactByCustomer(Customer customer) {
         Connection conn = null;
         Contact tempContact = null;
 
@@ -258,7 +259,7 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 
-            if(rs.next()){
+            if (rs.next()) {
                 tempContact = new Contact(
                         rs.getInt("contactNumber"),
                         rs.getString("contactName"), rs.getString("phone"),
@@ -270,7 +271,7 @@ public class CustomerDAOimpl extends JdbcDaoSupport implements CustomerDAO {
             throw new RuntimeException(e);
         } catch (Exception e) {
             throw new RuntimeException(e);
-        }finally {
+        } finally {
             if (conn != null) {
                 try {
                     conn.close();

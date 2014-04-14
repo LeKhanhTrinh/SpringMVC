@@ -58,7 +58,7 @@ public class Product {
         this.year = year;
     }
 
-    public String toString(){
-        return getSerialProduct() +", "+ getProductLine().getName()+", "+ getModelProduct()+", "+getYear();
+    public String toString() {
+        return getSerialProduct() + ", " + getProductLine().getName() + ", " + getModelProduct() + ", " + getYear();
     }
 }

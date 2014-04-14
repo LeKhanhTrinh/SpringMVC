@@ -7,8 +7,6 @@ import com.qsoft.persistent.dao.impl.CustomerDAOimpl;
 import com.qsoft.persistent.entity.Contact;
 import com.qsoft.persistent.entity.Customer;
 import com.qsoft.util.PagingObject;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +31,7 @@ public class CustomerService {
 
         // convert customerList to customerBusinessModelList....
         List<Customer> customerList = pagingObjectCustomer.getObjects();
-        List<CustomerBusinessModel> customerBusinessModelList =  getListCustomerBusiness(customerList);
+        List<CustomerBusinessModel> customerBusinessModelList = getListCustomerBusiness(customerList);
 
         //set values for pagingObject
         pagingObject.setObjects(customerBusinessModelList);
@@ -44,10 +42,10 @@ public class CustomerService {
         return pagingObject;
     }
 
-    List<CustomerBusinessModel> getListCustomerBusiness(List<Customer> customerList){
+    List<CustomerBusinessModel> getListCustomerBusiness(List<Customer> customerList) {
         List<CustomerBusinessModel> customerBusinessModelList = new ArrayList<CustomerBusinessModel>();
 
-        for(Customer customer : customerList){
+        for (Customer customer : customerList) {
             CustomerBusinessModel customerBusinessModel = new CustomerBusinessModel();
             customerBusinessModel.setCustomerName(customer.getCustomerName());
             CustomerDAO customerDAO = new CustomerDAOimpl();
@@ -65,7 +63,7 @@ public class CustomerService {
         return customerBusinessModelList;
     }
 
-    public CustomerBusinessModelDetail findDetailByNameCustomer(String nameCus){
+    public CustomerBusinessModelDetail findDetailByNameCustomer(String nameCus) {
 
         CustomerBusinessModelDetail customerBusinessModelDetail = new CustomerBusinessModelDetail();
         customerBusinessModelDetail.setCustomerName(nameCus);
@@ -86,7 +84,7 @@ public class CustomerService {
         return customerBusinessModelDetail;
     }
 
-    public CustomerBusinessModelDetail findDetailByCustomerId(int idCustomer){
+    public CustomerBusinessModelDetail findDetailByCustomerId(int idCustomer) {
 
         CustomerBusinessModelDetail customerBusinessModelDetail = new CustomerBusinessModelDetail();
         customerBusinessModelDetail.setCustomerNumber(idCustomer);
@@ -108,7 +106,7 @@ public class CustomerService {
     }
 
 
-    public Customer findCustomerByName (String customerName){
+    public Customer findCustomerByName(String customerName) {
         CustomerDAO customerDAO = new CustomerDAOimpl();
         Customer customer = customerDAO.findCustomerByName(customerName);
         return customer;

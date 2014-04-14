@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class EquipmentService {
     public PagingObject<EquipmentBusinessModel> getListEquipmentBusinessModel(
-            PagingObject<EquipmentBusinessModel> pagingObject, Customer customer){
+            PagingObject<EquipmentBusinessModel> pagingObject, Customer customer) {
 
         PagingObject<Product> productPagingObject = new PagingObject<Product>();
         productPagingObject.setCurrentPage(pagingObject.getCurrentPage());
@@ -33,28 +33,14 @@ public class EquipmentService {
         return equipmentBusinessModelPagingObject;
     }
 
-    List<EquipmentBusinessModel> getListEquipmentBusinessModelFromListProduct(List<Product> productList){
+    List<EquipmentBusinessModel> getListEquipmentBusinessModelFromListProduct(List<Product> productList) {
         List<EquipmentBusinessModel> equipmentBusinessModelList = new ArrayList<EquipmentBusinessModel>();
-        for(Product product : productList){
+        for (Product product : productList) {
             EquipmentBusinessModel equipmentBusinessModel = new EquipmentBusinessModel(
                     product.getSerialProduct(), product.getProductLine(),
                     product.getModelProduct(), product.getYear());
             equipmentBusinessModelList.add(equipmentBusinessModel);
         }
         return equipmentBusinessModelList;
-    }
-
-    public static void main(String[] args) {
-        EquipmentService equipmentService = new EquipmentService();
-        PagingObject<EquipmentBusinessModel> equipmentBusinessModelPagingObject = new PagingObject<EquipmentBusinessModel>();
-        equipmentBusinessModelPagingObject.setCurrentPage(1);
-        equipmentBusinessModelPagingObject.setSizeOfPage(5);
-        Customer customer = new Customer(1);
-        equipmentBusinessModelPagingObject = equipmentService.getListEquipmentBusinessModel(equipmentBusinessModelPagingObject, customer);
-        System.out.println(equipmentBusinessModelPagingObject.getTotalPage());
-        for(EquipmentBusinessModel product : equipmentBusinessModelPagingObject.getObjects()){
-            System.out.println(product.getSerialProduct() +":"+product.getProductLine().getName()
-                    +": "+ product.getModelProduct() + ":" + product.getYear());
-        }
     }
 }
