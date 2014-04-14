@@ -36,19 +36,11 @@
             </tr>
             <tr>
                 <td></td>
-<<<<<<< HEAD
-                <td><input type="checkbox" name="isMain" VALUE="isMain" checked> Main Contact</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" value="Save" onclick="getValueOfCheckBox(this.form)">
-=======
                 <td><input type="checkbox" name="isMain" checked> Main Contact</td>
             </tr>
             <tr>
                 <td></td>
                 <td><input type="submit" value="Save">
->>>>>>> 52282f5eee682bec64cd6dcb9bd971645498c60c
                     <button onclick="closewindow()">Cancel</button>
                 </td>
             </tr>
@@ -66,22 +58,7 @@
 </html>
 
 <script>
-<<<<<<< HEAD
 
-    function getValueOfCheckBox(frm) {
-        var checkedValue = null;
-        var message = "isMain:\n\n"
-        var inputElements = document.getElementsByTagName('isMain');
-        for (var i = 0; frm.isMain.length; ++i) {
-            if (frm.isMain[i].checked) {
-                message = message + frm.isMain[i].value + "\n";
-            }
-        }
-        alert(message);
-    }
-
-=======
->>>>>>> 52282f5eee682bec64cd6dcb9bd971645498c60c
     function closewindow() {
         window.close();
     }

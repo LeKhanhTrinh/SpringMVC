@@ -67,12 +67,17 @@
       <file leaf-file-name="OrderController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="54" selection-start="2306" selection-end="2306" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#859#879#0" expanded="true" />
-                <element signature="e#2077#2097#0" expanded="true" />
-              </folding>
+            <state line="47" column="54" selection-start="2306" selection-end="2306" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1088">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContactController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/ContactController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="64" selection-start="1376" selection-end="1382" vertical-scroll-proportion="0.63684213" vertical-offset="81" max-vertical-offset="731">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,13 +85,8 @@
       <file leaf-file-name="OrderDAOimpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/impl/OrderDAOimpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="44" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="4862">
+            <state line="47" column="44" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="4862">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#753#760#0" expanded="true" />
-                <element signature="e#1005#1012#0" expanded="true" />
-                <element signature="e#3411#3420#0" expanded="true" />
-                <element signature="e#6697#6710#0" expanded="true" />
                 <marker date="1397463100438" expanded="true" signature="1070:1628" placeholder="select custo..orders..." />
                 <marker date="1397463100438" expanded="true" signature="3286:3359" placeholder="Select * fro..contacts..." />
                 <marker date="1397463100438" expanded="true" signature="4465:4553" placeholder="Select * fro..contacts..." />
@@ -99,21 +99,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EquipmentService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/business/service/EquipmentService.java">
+      <file leaf-file-name="addContact.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/addContact.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="57" selection-start="2374" selection-end="2374" vertical-scroll-proportion="0.0" vertical-offset="353" max-vertical-offset="986">
-              <folding>
-                <element signature="e#2483#2507#0" expanded="true" />
-              </folding>
+            <state line="33" column="34" selection-start="937" selection-end="937" vertical-scroll-proportion="-1.9615384" vertical-offset="510" max-vertical-offset="1207">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EquipmentDAOimpl.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="EquipmentService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/business/service/EquipmentService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="57" selection-start="2374" selection-end="2374" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1122">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EquipmentDAOimpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/impl/EquipmentDAOimpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="24" selection-start="3041" selection-end="3041" vertical-scroll-proportion="0.8292683" vertical-offset="578" max-vertical-offset="2023">
+            <state line="70" column="21" selection-start="3209" selection-end="3209" vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="2023">
               <folding>
                 <element signature="e#4591#4600#0" expanded="true" />
                 <marker date="1397463121064" expanded="true" signature="1010:1693" placeholder="select custo..products..." />
@@ -126,12 +133,8 @@
       <file leaf-file-name="OrderService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/business/service/OrderService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="39" selection-start="2072" selection-end="2072" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1411">
-              <folding>
-                <element signature="e#1295#1315#0" expanded="true" />
-                <element signature="e#2009#2029#0" expanded="true" />
-                <element signature="e#3423#3443#0" expanded="true" />
-              </folding>
+            <state line="47" column="39" selection-start="2072" selection-end="2072" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1581">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,7 +142,7 @@
       <file leaf-file-name="ContactDAOimpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/impl/ContactDAOimpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="38" selection-start="1091" selection-end="1091" vertical-scroll-proportion="-9.2" vertical-offset="212" max-vertical-offset="799">
+            <state line="31" column="38" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="884">
               <folding>
                 <marker date="1397462816546" expanded="true" signature="487:619" placeholder="INSERT INTO ..." />
               </folding>
@@ -150,7 +153,7 @@
       <file leaf-file-name="customerDetail.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/customerDetail.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="57" selection-start="1103" selection-end="1103" vertical-scroll-proportion="-13.076923" vertical-offset="391" max-vertical-offset="1309">
+            <state line="43" column="57" selection-start="1103" selection-end="1103" vertical-scroll-proportion="-20.26923" vertical-offset="204" max-vertical-offset="1309">
               <folding />
             </state>
           </provider>
@@ -159,27 +162,7 @@
       <file leaf-file-name="OrderDetailService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/business/service/OrderDetailService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="9" selection-start="2125" selection-end="2125" vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="578">
-              <folding>
-                <element signature="method#getListOrderDetailBusinessModel#0;class#OrderDetailService#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="orderDetail.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/orderDetail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="32" selection-start="408" selection-end="408" vertical-scroll-proportion="-3.2692308" vertical-offset="170" max-vertical-offset="1377">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderDetailController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/OrderDetailController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="59" selection-start="1884" selection-end="1884" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="1054">
+            <state line="47" column="9" selection-start="2125" selection-end="2125" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1139">
               <folding />
             </state>
           </provider>
@@ -236,7 +219,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/ListEquipment.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/ListOrder.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/impl/CustomerDAOimpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/addContact.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/persistent/entity/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/OrderDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/presentation/OrderDetailController.java" />
@@ -249,6 +231,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/impl/OrderDAOimpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/business/service/EquipmentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/impl/EquipmentDAOimpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/addContact.jsp" />
       </list>
     </option>
   </component>
@@ -654,8 +637,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1163,11 +1146,12 @@
       <workItem from="1397438884310" duration="15463000" />
       <workItem from="1397459558954" duration="276000" />
       <workItem from="1397459983197" duration="3053000" />
+      <workItem from="1397463612351" duration="476000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130356000" />
+    <option name="totallyTimeSpent" value="130832000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1185,10 +1169,10 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7471452" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3254717" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32861635" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3254717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3254717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1196,7 +1180,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27598828" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32861635" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
@@ -1406,13 +1390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/ContactController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="40" selection-start="911" selection-end="921" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/impl/CustomerDAOimpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="69" selection-start="1958" selection-end="1958" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="3043">
@@ -1451,13 +1428,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/business/service/CustomerService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="61" selection-start="3956" selection-end="3978" vertical-scroll-proportion="-0.4895288" vertical-offset="1496" max-vertical-offset="1904">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/addContact.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="85" selection-start="1525" selection-end="1525" vertical-scroll-proportion="9.692307" vertical-offset="1051" max-vertical-offset="1411">
           <folding />
         </state>
       </provider>
@@ -1508,55 +1478,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/orderDetail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="32" selection-start="408" selection-end="408" vertical-scroll-proportion="-3.2692308" vertical-offset="170" max-vertical-offset="1377">
+        <state line="15" column="32" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1377">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/impl/ContactDAOimpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="38" selection-start="1091" selection-end="1091" vertical-scroll-proportion="-9.2" vertical-offset="212" max-vertical-offset="799">
+        <state line="31" column="38" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="884">
           <folding>
             <marker date="1397462816546" expanded="true" signature="487:619" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/customerDetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="57" selection-start="1103" selection-end="1103" vertical-scroll-proportion="-13.076923" vertical-offset="391" max-vertical-offset="1309">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/business/service/OrderDetailService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="9" selection-start="2125" selection-end="2125" vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="578">
-          <folding>
-            <element signature="method#getListOrderDetailBusinessModel#0;class#OrderDetailService#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="54" selection-start="2306" selection-end="2306" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#859#879#0" expanded="true" />
-            <element signature="e#2077#2097#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/business/service/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="39" selection-start="2072" selection-end="2072" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1411">
-          <folding>
-            <element signature="e#1295#1315#0" expanded="true" />
-            <element signature="e#2009#2029#0" expanded="true" />
-            <element signature="e#3423#3443#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1564,11 +1517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="44" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="4862">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#753#760#0" expanded="true" />
-            <element signature="e#1005#1012#0" expanded="true" />
-            <element signature="e#3411#3420#0" expanded="true" />
-            <element signature="e#6697#6710#0" expanded="true" />
             <marker date="1397463100438" expanded="true" signature="1070:1628" placeholder="select custo..orders..." />
             <marker date="1397463100438" expanded="true" signature="3286:3359" placeholder="Select * fro..contacts..." />
             <marker date="1397463100438" expanded="true" signature="4465:4553" placeholder="Select * fro..contacts..." />
@@ -1583,20 +1531,39 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/business/service/EquipmentService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="57" selection-start="2374" selection-end="2374" vertical-scroll-proportion="0.0" vertical-offset="353" max-vertical-offset="986">
-          <folding>
-            <element signature="e#2483#2507#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/persistent/dao/impl/EquipmentDAOimpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="24" selection-start="3041" selection-end="3041" vertical-scroll-proportion="0.8292683" vertical-offset="578" max-vertical-offset="2023">
+        <state line="70" column="21" selection-start="3209" selection-end="3209" vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="2023">
           <folding>
             <element signature="e#4591#4600#0" expanded="true" />
             <marker date="1397463121064" expanded="true" signature="1010:1693" placeholder="select custo..products..." />
             <marker date="1397463121064" expanded="true" signature="3556:3619" placeholder="select * fro..products..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/customerDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="57" selection-start="1103" selection-end="1103" vertical-scroll-proportion="-20.26923" vertical-offset="204" max-vertical-offset="1309">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/page/addContact.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="34" selection-start="937" selection-end="937" vertical-scroll-proportion="-1.9615384" vertical-offset="510" max-vertical-offset="1207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qsoft/presentation/ContactController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="64" selection-start="1376" selection-end="1382" vertical-scroll-proportion="0.63684213" vertical-offset="81" max-vertical-offset="731">
+          <folding />
         </state>
       </provider>
     </entry>
